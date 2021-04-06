@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: be3c307bc3019164d92bc397c322564f
+  - enabled: 1
+    path: Assets/Scenes/WolfAdventure.unity
+    guid: 5cbe9d7c8cda8d240bc9d9650169d4c3
+  m_configObjects: {}
