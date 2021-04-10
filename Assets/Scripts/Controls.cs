@@ -20,10 +20,18 @@ public class Controls : MonoBehaviour
         if (PlayerPrefs.HasKey("shuffle"))
         {
             animator.SetInteger("shuffle", PlayerPrefs.GetInt("shuffle"));
+            if (PlayerPrefs.GetInt("shuffle")  <= 0)
+            {
+                
+            }
         }
     }
     public void contin()
     {
+        if (PlayerPrefs.HasKey("shuffle"))
+        {
+            animator.SetInteger("shuffle", PlayerPrefs.GetInt("shuffle"));
+        }
         Time.timeScale = 1;
         menu.SetActive(false);
     }
