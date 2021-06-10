@@ -21,12 +21,17 @@ public struct Line
 {
     [TextArea(2, 5)]
     public string text;
+    [TextArea(2, 5)]
+    public string englishText;
 }
+
 
 [CreateAssetMenu(fileName = "New Conversation", menuName = "Conversation")]
 public class Dialogue : ScriptableObject
 {
+    public Character character;
     public Line[] lines;
     public Choice choice;
     public Dialogue nextDialogue;
+    public Exodus consequence;
 }

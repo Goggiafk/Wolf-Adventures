@@ -6,12 +6,30 @@ public class Controls : MonoBehaviour
 {
     public Animator animator;
     public GameObject menu;
+    public GameObject settings;
+    public GameObject allUI;
+    public bool checkMenuClosed = false;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menu.SetActive(true);
-            Time.timeScale = 0;
+            if (settings.activeInHierarchy)
+            {
+                settings.SetActive(false);
+                menu.SetActive(true);
+            }
+            else if (menu.activeInHierarchy)
+            {
+                allUI.SetActive(true);
+                menu.SetActive(false);
+                Time.timeScale = 1;
+            }
+            else
+            {
+                allUI.SetActive(false);
+                menu.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
     }
 

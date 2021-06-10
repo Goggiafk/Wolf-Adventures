@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  text: ...
+  textInEnglish: ...
+  character: {fileID: 11400000, guid: ea86ba0bad98ca344953e0d3ed9ece78, type: 2}
+  options:
+  - text: "\u041E\u0431\u044A\u044F\u0432\u043B\u044F\u044E \u043A\u0443\u043A\u043B\u0443
+      \u043A\u043E\u0440\u043E\u043B\u0451\u043C \u0415\u0431\u0435\u043D\u044C\u0413\u0440\u0430\u0434\u0430!"
+    textInEnglish: I declare the doll the king of EbenGrad!
+    dialogue: {fileID: 11400000, guid: faf85125173717b429010a491198d1e4, type: 2}
+  - text: "\u042F \u043F\u043E\u0433\u043E\u0440\u044F\u0447\u0438\u043B\u0441\u044F,
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u043C \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
+    textInEnglish: The situation got out of contro, let's continue our training
+    dialogue: {fileID: 11400000, guid: 467cbc8f48099f848814fcca234109bc, type: 2}

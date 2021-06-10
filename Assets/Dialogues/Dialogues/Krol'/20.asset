@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 20
+  m_EditorClassIdentifier: 
+  text: "\u041B\u0438\u0447\u043D\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B?"
+  textInEnglish: 
+  character: {fileID: 11400000, guid: ea86ba0bad98ca344953e0d3ed9ece78, type: 2}
+  options:
+  - text: "\u041A\u0442\u043E \u0442\u044B?"
+    textInEnglish: Who are you?
+    dialogue: {fileID: 11400000, guid: 7a2f20600a76202469d100f6ee40d709, type: 2}
+  - text: "\u0420\u0430\u0441\u0441\u043A\u0430\u0436\u0438 \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435
+      \u043F\u0440\u043E \u043A\u043E\u0440\u043E\u043B\u0435\u0432\u0441\u0442\u0432\u043E"
+    textInEnglish: Tell me more about the kingdom
+    dialogue: {fileID: 11400000, guid: 314691b0e21c7154dbe6c2d706029052, type: 2}
+  - text: "\u0412\u043E\u043F\u0440\u043E\u0441\u043E\u0432 \u043D\u0435\u0442, \u043F\u043E\u0439\u0434\u0443
+      \u0432\u0435\u0440\u0448\u0438\u0442\u044C \u0441\u0443\u0434\u044C\u0431\u044B"
+    textInEnglish: I have no questions
+    dialogue: {fileID: 11400000, guid: 22ff39c3b703c3a40b9a0b27a5b53e57, type: 2}

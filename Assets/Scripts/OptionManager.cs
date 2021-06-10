@@ -10,10 +10,12 @@ public class OptionManager : MonoBehaviour
 {
     public Option option;
     public DialogueChangeEvent dialogueChangeEvent;
+    public GameObject textArea;
+
 
     public static OptionManager AddChoiceButton(Button choiceButtonTemplate, Option option, int index)
     {
-        int buttonSpacing = -40;
+        int buttonSpacing = -55;
         Button button = Instantiate(choiceButtonTemplate);
 
         button.transform.SetParent(choiceButtonTemplate.transform.parent);
@@ -24,6 +26,9 @@ public class OptionManager : MonoBehaviour
 
         OptionManager choiceManager = button.GetComponent<OptionManager>();
         choiceManager.option = option;
+
+        
+
         return choiceManager;
     }
 
@@ -32,11 +37,15 @@ public class OptionManager : MonoBehaviour
         if (dialogueChangeEvent == null)
             dialogueChangeEvent = new DialogueChangeEvent();
 
-        GetComponent<Button>().GetComponentInChildren<Text>().text = option.text;
+        if (PlayerPrefs.GetInt("_language_index") == 1)
+            GetComponent<Button>().GetComponentInChildren<Text>().text = option.text;
+        else
+            GetComponent<Button>().GetComponentInChildren<Text>().text = option.textInEnglish;
     }
 
     public void MakeChoice()
     {
+        textArea.SetActive(true);
         dialogueChangeEvent.Invoke(option.dialogue);
     }
 }

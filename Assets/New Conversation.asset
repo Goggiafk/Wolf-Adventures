@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
   m_Name: New Conversation
   m_EditorClassIdentifier: 
-  choice: {fileID: 0}
-  nextConversation: {fileID: 0}
+  characterName: 
+  clip: {fileID: 0}
   lines:
-  - text: 
-  - text: 
+  - text: dialogueReplic1
+  - text: dialogueReplic2
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 0}
+  check: 0

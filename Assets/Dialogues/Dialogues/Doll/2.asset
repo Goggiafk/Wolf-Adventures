@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  text: "\u0445\u0430\u0447\u044E \u043A\u0443\u0440\u0442\u043A\u0443 "
+  textInEnglish: i want a jacket
+  character: {fileID: 11400000, guid: 3739d7a7b3ac95a4abca3817263c2fc8, type: 2}
+  options:
+  - text: "\u042D\u043C\u043C, \u043D\u0443 \u0434\u0435\u0440\u0436\u0438 (-3 \u0437\u043E\u043B\u043E\u0442\u0430)"
+    textInEnglish: Okay, here you go(-3 gold)
+    dialogue: {fileID: 11400000, guid: d3fb12cedc3dc7b4282329cc0d3ff356, type: 2}
+  - text: "\u0427\u0442\u043E? \u0417\u0430\u0447\u0435\u043C \u043A\u0443\u043A\u043B\u0435
+      \u043A\u0443\u0440\u0442\u043A\u0430? \u041D\u0435\u0442!"
+    textInEnglish: How absurd! Why would the doll need a jacket?
+    dialogue: {fileID: 11400000, guid: 959a9dde7ecc645449d78fb4f02e4fe8, type: 2}
+  - text: "\u041D\u0443 \u043D\u0430\u0445\u0435\u0440, \u044F \u043E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0441\u044C
+      \u043E\u0442 \u043F\u0440\u0435\u0441\u0442\u043E\u043B\u0430!"
+    textInEnglish: To hell with it, I'm giving up the throne!
+    dialogue: {fileID: 11400000, guid: 97ebd643a32682f41afa3ab2fb4eb8c1, type: 2}

@@ -24,6 +24,8 @@ public class CharacterController2D : MonoBehaviour
 
 	public UnityEvent OnLandEvent;
 
+	public GameObject dialogueWindow;
+
 	[System.Serializable]
 	public class BoolEvent : UnityEvent<bool> { }
 
@@ -43,6 +45,8 @@ public class CharacterController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		
+
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -63,6 +67,10 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Move(float move, bool crouch, bool jump)
 	{
+		if (dialogueWindow.activeInHierarchy)
+		{
+			move = 0;
+		}
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
 		{

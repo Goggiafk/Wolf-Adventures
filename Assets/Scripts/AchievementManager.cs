@@ -17,7 +17,7 @@ public class AchievementManager : MonoBehaviour
 
     void Update()
     {
-        //if(!SteamManager.Initialized) { return; }
+        if(!SteamManager.Initialized) { return; }
     }
 
     public void RequestStats()

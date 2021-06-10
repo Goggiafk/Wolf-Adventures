@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 24
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
+  lines:
+  - text: "\u041C\u043E\u044E \u043C\u0430\u043C\u0443 \u043D\u0430\u0448\u0451\u043B
+      \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E \u043D\u0430\u0448 \u0441\u043E\u0441\u0435\u0434"
+    englishText: 
+  - text: "\u041E\u043D\u0430 \u0443\u043C\u0435\u0440\u043B\u0430..."
+    englishText: 
+  - text: "\u042D\u0422\u041E \u0412\u0421\u0401 \u0422\u0412\u041E\u042F \u0412\u0418\u041D\u0410!"
+    englishText: 
+  - text: "\u041D\u0415\u041D\u0410\u0412\u0418\u0416\u0423!"
+    englishText: 
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 11400000, guid: d1cf43b843853094381c784c8a3444d4, type: 2}

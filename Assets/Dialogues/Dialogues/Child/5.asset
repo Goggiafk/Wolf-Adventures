@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  text: ...
+  character: {fileID: 11400000, guid: 7701a5084a9ebd3479b548e4580e25f1, type: 2}
+  options:
+  - text: "\u0412\u043E\u0442 \u043F\u0430\u0440\u0448\u0438\u0432\u044B\u0435 \u0441\u0442\u0440\u0430\u0436\u043D\u0438\u043A\u0438!"
+    dialogue: {fileID: 11400000, guid: 63362758c50e2b54fa8eb4e9ceffd27f, type: 2}
+  - text: "\u042F \u0431\u044B \u0438 \u0441\u0430\u043C \u0442\u0435\u0431\u044F
+      \u0432 \u0448\u0430\u0445\u0442\u044B \u0441\u043E\u0441\u043B\u0430\u043B"
+    dialogue: {fileID: 11400000, guid: dc0c040d7a922e9419c6b746a1f51f01, type: 2}
