@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 7
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 7701a5084a9ebd3479b548e4580e25f1, type: 2}
+  lines:
+  - text: "\u0418\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E, \u044F \u0437\u0430\u043F\u0438\u0441\u0430\u043B.
+      \u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u043C \u043D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+      \u043E\u043D\u0430 \u0432\u043A\u0443\u0441\u043D\u0430\u044F.."
+    englishText: Interestingly, I wrote it down. Let's see how delicious it is..
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 9cf6a849a6fbc874c9ab6626ee25e0a8, type: 2}
+  consequence: {fileID: 0}

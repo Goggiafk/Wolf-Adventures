@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 7701a5084a9ebd3479b548e4580e25f1, type: 2}
+  text: ...
+  textInEnglish: ...
+  options:
+  - text: "\u042F \u0434\u0430\u044E \u0441\u0432\u043E\u0451 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435!"
+    textInEnglish: I give my permission!
+    dialogue: {fileID: 11400000, guid: ae5dc340877824f4695bdc4d0eb5b20e, type: 2}
+  - text: "\u0422\u043E\u043B\u044C\u043A\u043E \u0435\u0441\u043B\u0438 \u0437\u0430
+      \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0435\u043D\u043D\u0443\u044E \u043F\u043B\u0430\u0442\u0443"
+    textInEnglish: Only if for a certain fee
+    dialogue: {fileID: 11400000, guid: 0cc00ef51a53c6345bbdee4b036e63e2, type: 2}
+  - text: "\u042F \u043E\u0442\u043A\u0430\u0437\u044B\u0432\u0430\u044E \u0432 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0438."
+    textInEnglish: I must refuse
+    dialogue: {fileID: 11400000, guid: 9cf9f1d3b63da044586fd93195e17d9f, type: 2}

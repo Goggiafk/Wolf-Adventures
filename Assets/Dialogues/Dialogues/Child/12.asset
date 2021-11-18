@@ -15,12 +15,12 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
   lines:
   - text: "\u0422\u043E\u043B\u044C\u043A\u043E..."
-    englishText: 
+    englishText: But
   - text: "\u0415\u0449\u0451 \u043E\u0434\u043D\u0430 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430"
-    englishText: 
+    englishText: I have another one problem
   - text: "\u0423 \u043C\u0435\u043D\u044F \u0441\u043E\u0432\u0441\u0435\u043C \u043D\u0435\u0442
       \u0435\u0434\u044B"
-    englishText: 
+    englishText: I have absolutely no food
   choice: {fileID: 11400000, guid: 7a321c4478ab4e348adc9b2adf111019, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}

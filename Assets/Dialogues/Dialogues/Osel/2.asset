@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - text: "\u041E\u0442\u043A\u0440\u044B\u0442\u0430 \u043D\u043E\u0432\u0430\u044F
       \u043B\u043E\u043A\u0430\u0446\u0438\u044F \"\u0411\u043E\u043B\u043E\u0442\u043E\""
-    englishText: 
+    englishText: A new location "Swamp" has been opened"
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: f120d5f2cff9cc44c90629e647e22459, type: 2}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 41
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 70a8281ae08323a42bc451de2ad99f5c, type: 2}
+  lines:
+  - text: "\u041D\u0443 \u0438 \u0447\u0442\u043E \u0442\u044B \u043D\u0430\u043C
+      \u0445\u043E\u0447\u0435\u0448\u044C \u0441\u043A\u0430\u0437\u0430\u0442\u044C?"
+    englishText: So what do you want to tell us?
+  - text: "\u0417\u0430\u0443\u0447\u0435\u043D\u043D\u0443\u044E \u0440\u0435\u0447\u044C,
+      \u043C\u043E\u043B"
+    englishText: Memorized speech, like
+  - text: "\"\u042F \u043D\u0435 \u0445\u043E\u0442\u0435\u043B\""
+    englishText: '"I didn''t mean it"'
+  - text: "\"\u042F \u0441\u043E\u0432\u0435\u0440\u0448\u0438\u043B \u043E\u0448\u0438\u0431\u043A\u0443\""
+    englishText: '"I made a mistake"'
+  - text: "\u041D\u0435 \u043F\u0440\u043E\u043A\u0430\u0442\u0438\u0442!"
+    englishText: This is not gonna work!
+  choice: {fileID: 11400000, guid: 75f98988d90e628428a9b4a1fe8140be, type: 2}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 0}

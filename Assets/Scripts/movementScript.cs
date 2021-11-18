@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SimpleInputNamespace;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +13,15 @@ public class movementScript : MonoBehaviour
 
     float horizontalMove = 0f;
 
+    public Animator animator;
+
+    public Joystick joystick;
+
     bool jump = false;
     bool crouch = false;
+
+    public AudioClip clip;
+    public AudioSource source;
     void Start()
     {
         
@@ -22,20 +30,35 @@ public class movementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * playerSpeed;
+        
+        if (!source.isPlaying && Mathf.Abs(horizontalMove) > 0.01f)
+            source.PlayOneShot(clip);
+        horizontalMove = joystick.xAxis.value * playerSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            jump = true;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            crouch = true;
-        } else if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            crouch = false;
-        }
+  
+
+    }
+    public void Jumper()
+    {
+        jump = true;
+        animator.SetBool("IsJumping", true);
     }
     
+    public void Croucher()
+    {
+        crouch = !crouch;
+    }
+
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
+
+    public void OnCrouching(bool isCrouching)
+    {
+        animator.SetBool("IsCrouching", isCrouching);
+    }
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);

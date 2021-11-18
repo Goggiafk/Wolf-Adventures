@@ -15,14 +15,18 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: "\u041A\u0430\u043F\u0438\u0442\u0430\u043D..."
+    englishText: Captain...
   - text: "\u041C\u044B \u043D\u0435 \u043C\u043E\u0436\u0435\u043C \u0442\u0430\u043A
       \u0431\u043E\u043B\u044C\u0448\u0435 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0442\u044C!"
+    englishText: We can't go on like this anymore!
   - text: "\u0412\u043E\u043D, \u0432 \u0434\u0440\u0443\u0433\u043E\u043C \u043A\u043E\u0440\u043E\u043B\u0435\u0432\u0441\u0442\u0432\u0435"
+    englishText: In another kingdom
   - text: "\u0418 \u043F\u0430\u0439\u043A\u0438."
+    englishText: And rations.
   - text: "\u0418 \u043A\u043E\u0440\u043E\u0442\u043A\u0438\u0435 \u0441\u043C\u0435\u043D\u044B!"
-  - text: "\u0410 \u0442\u0443\u0442 \u044F \u0445*\u0439 \u043C\u044F\u0441\u043D\u043E\u0439
-      \u0434\u043E\u0435\u0434\u0430\u044E"
+    englishText: And short shift!
+  - text: "\u0410 \u0442\u0443\u0442 \u044F \u0433\u043E\u043B\u043E\u0434\u0430\u044E"
+    englishText: And here I am just starving
   choice: {fileID: 11400000, guid: f4948dc1c7c431345abfee46368e2fff, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}
-  check: 0

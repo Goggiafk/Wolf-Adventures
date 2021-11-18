@@ -15,9 +15,10 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 49b3d19b82d46484bbe17b9915cf6d35, type: 2}
   lines:
   - text: "\u0412\u044B \u0443\u0432\u0435\u0440\u0435\u043D\u044B?"
+    englishText: Are you sure?
   - text: "\u041F\u043E\u0441\u043B\u0435\u0434\u0441\u0442\u0432\u0438\u044F \u043C\u043E\u0433\u0443\u0442
       \u0431\u044B\u0442\u044C \u0443\u0436\u0430\u0441\u0430\u044E\u0449\u0438\u043C\u0438!"
+    englishText: The consequences can be terrifying!
   choice: {fileID: 11400000, guid: 89d13559e877d4344bd1d9a833d2f716, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}
-  check: 0

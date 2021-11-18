@@ -15,9 +15,9 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
   lines:
   - text: "\u041B\u0430\u0434\u043D\u043E"
-    englishText: 
+    englishText: Well... Okay
   - text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E"
-    englishText: 
+    englishText: Thanks for helping
   choice: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 142d26315b4019749947477866d20e98, type: 2}
   consequence: {fileID: 11400000, guid: 0283e85dfc5021a4e9d5d9cd7a432794, type: 2}

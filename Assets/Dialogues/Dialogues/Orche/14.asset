@@ -12,18 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
   m_Name: 14
   m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   text: "\u041D\u0430\u0437\u043D\u0430\u0447\u0438\u0442\u044C \u043E\u0440\u043A\u0430
     \u0440\u0435\u0448\u0430\u0442\u044C \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0443?"
-  character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
+  textInEnglish: 
   options:
   - text: "\u041D\u0415\u0422! \u041D\u0415\u0422! \u041D\u0415\u0422! (\u041F\u0440\u043E\u0431\u043B\u0435\u043C\u0430
       \u043E\u0441\u0442\u0430\u043D\u0435\u0442\u0441\u044F \u043D\u0435\u0440\u0435\u0448\u0451\u043D\u043D\u043E\u0439)"
+    textInEnglish: NO! NO AND NO! (The problem will remain unresolved)
     dialogue: {fileID: 11400000, guid: 51921408607a9ee4798f6cd5937c1e37, type: 2}
   - text: "\u041F\u043E\u0440\u0443\u0447\u0430\u044E \u0442\u0435\u0431\u0435 \u0437\u0430\u043D\u044F\u0442\u044C\u0441\u044F
       \u044D\u0442\u043E\u0439 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u043E\u0439"
+    textInEnglish: I entrust you to deal with this problem
     dialogue: {fileID: 11400000, guid: 6d91b076fe904154092b9aead1a173fa, type: 2}
   - text: "... \u041B\u0430\u0434\u043D\u043E, \u0443 \u043D\u0430\u0441 \u043D\u0430\u0439\u0434\u0451\u0442\u0441\u044F
       \u043A\u043E\u043C\u0443 \u0437\u0430\u043D\u044F\u0442\u044C\u0441\u044F \u044D\u0442\u0438\u043C
       (\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0435\u0439 \u0437\u0430\u0439\u043C\u0451\u0442\u0441\u044F
       \u041C\u0435\u043A\u0441\u0438\u043A\u0430\u043D\u0435\u0446)"
+    textInEnglish: ... Okay, we have someone to do this (Finance minister will do
+      it)
     dialogue: {fileID: 11400000, guid: 2545e8c0b2ac38748a4a67437668a7ae, type: 2}

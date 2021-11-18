@@ -15,12 +15,12 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
   lines:
   - text: "\u0412\u044B \u043D\u0435 \u043C\u043E\u0436\u0435\u0442\u0435!"
-    englishText: 
+    englishText: You can't!
   - text: "\u0427\u0442\u043E \u0436\u0435 \u043C\u043D\u0435 \u0434\u0435\u043B\u0430\u0442\u044C?"
-    englishText: 
+    englishText: What am I supposed to do?
   - text: "\u0412\u044B \u043E\u0442\u0432\u0435\u0442\u0438\u0442\u0435 \u0437\u0430
       \u044D\u0442\u043E!"
-    englishText: 
+    englishText: You'll pay for this!
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: d1cf43b843853094381c784c8a3444d4, type: 2}

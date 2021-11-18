@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
-  - text: "\u041F\u0438**\u044B\u0435\u0446..."
-    englishText: 
+  - text: "\u0427\u0451\u0440\u0442..."
+    englishText: Damn...
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
-  consequence: {fileID: 0}
-  nextCharacter: {fileID: 8160517115271553819, guid: 98e65328e105edc45897b269ce14cafe,
-    type: 3}
+  consequence: {fileID: 11400000, guid: 05367db0cc6de7247a6ffa1c5846b0d0, type: 2}

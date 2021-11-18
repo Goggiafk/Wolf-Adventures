@@ -11,13 +11,14 @@ public class MainMenuSaveSyst : MonoBehaviour
     public string[] saveFilesM;
     public GameObject loadAreaM;
     public Button loadButton;
+    public GameObject loadMenu;
 
     void Awake()
     {
         if (PlayerPrefs.HasKey("openLoadMenu"))
         {
             PlayerPrefs.DeleteKey("openLoadMenu");
-            loadAreaM.SetActive(true);
+            loadMenu.SetActive(true);
             loadSave();
         }
         Start();
@@ -67,7 +68,10 @@ public class MainMenuSaveSyst : MonoBehaviour
                 LoadGame(saveFilesM[index]);
             });
             cosbuttons[1].GetComponentInChildren<Text>().text = saveFilesM[index].Replace(Application.persistentDataPath + "/WolfAdventuresSaves", "");
-            cosbuttons[0].GetComponentInChildren<Text>().text = "Удолить";
+            if (PlayerPrefs.GetInt("_language_index") == 1)
+                cosbuttons[0].GetComponentInChildren<Text>().text = "Удалить";
+            else
+                cosbuttons[0].GetComponentInChildren<Text>().text = "Delete";
             cosbuttons[0].GetComponent<Button>().onClick.AddListener(() =>
             {
                 DelSave(saveFilesM[index]);

@@ -15,10 +15,12 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: "\u041D\u0443 \u0432\u0441\u0451..."
+    englishText: This is it!
   - text: "\u0412\u0430\u043C \u043D\u0435 \u0438\u0437\u0431\u0435\u0436\u0430\u0442\u044C
       \u043D\u0430\u0448\u0435\u0433\u043E \u0431\u0443\u043D\u0442\u0430!"
+    englishText: You will not escape our rebellion!
   - text: "\u0420\u0420\u0420\u0440\u0420\u0420\u0440\u0420\u0420\u0440!"
+    englishText: RRRrRRrRRr!
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: f603430176c32404f83406f189dbd8c2, type: 2}
-  check: 0

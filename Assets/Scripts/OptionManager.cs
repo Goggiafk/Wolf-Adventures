@@ -16,6 +16,9 @@ public class OptionManager : MonoBehaviour
     public static OptionManager AddChoiceButton(Button choiceButtonTemplate, Option option, int index)
     {
         int buttonSpacing = -55;
+        if (ChoiceManager.doubleSpacing)
+            buttonSpacing *= 2;
+        
         Button button = Instantiate(choiceButtonTemplate);
 
         button.transform.SetParent(choiceButtonTemplate.transform.parent);
@@ -27,7 +30,7 @@ public class OptionManager : MonoBehaviour
         OptionManager choiceManager = button.GetComponent<OptionManager>();
         choiceManager.option = option;
 
-        
+        ChoiceManager.doubleSpacing = false;
 
         return choiceManager;
     }

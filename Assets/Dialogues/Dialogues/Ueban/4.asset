@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: ea470a370f44ecd41aa67aec4d53f268, type: 2}
+  lines:
+  - text: ...
+    englishText: ...
+  - text: "\u0412 \u044D\u0442\u043E\u043C \u0438 \u0435\u0441\u0442\u044C \u043C\u043E\u044F
+      \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u0430..."
+    englishText: That's my problem...
+  - text: "\u0418\u0437-\u0437\u0430 \u043C\u043E\u0435\u0439 \u0432\u043D\u0435\u0448\u043D\u043E\u0441\u0442\u0438"
+    englishText: Because of my appearance
+  - text: "\u041C\u0435\u043D\u044F \u043F\u0440\u043E\u0433\u043D\u0430\u043B\u0438
+      \u0441 \u043C\u043E\u0438\u0445 \u0437\u0435\u043C\u0435\u043B\u044C..."
+    englishText: I was banished from my lands...
+  - text: "\u042F \u044F \u0431\u044B\u043B \u0432\u044B\u043D\u0443\u0436\u0434\u0435\u043D
+      \u0431\u0435\u0436\u0430\u0442\u044C..."
+    englishText: Iwas forced to flee
+  - text: "\u041A \u0432\u0430\u043C..."
+    englishText: To your kingdom...
+  choice: {fileID: 11400000, guid: 5c76ad509414c744f80bfc362270811f, type: 2}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 0}

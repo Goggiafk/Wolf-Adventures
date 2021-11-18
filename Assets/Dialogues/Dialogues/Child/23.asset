@@ -16,16 +16,16 @@ MonoBehaviour:
   lines:
   - text: "\u0414\u043E\u0431\u0440\u043E\u0432\u043E\u043B\u044C\u0446\u044B \u043D\u0430\u0448\u043B\u0438
       \u043C\u043E\u044E \u043C\u0430\u043C\u0443"
-    englishText: 
+    englishText: Volunteers found my mother...
   - text: "\u041D\u043E \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u043F\u043E\u0437\u0434\u043D\u043E"
-    englishText: 
+    englishText: But too late
   - text: "\u0415\u0451 \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\u0442 \u0441
       \u043D\u0430\u043C\u0438"
-    englishText: 
+    englishText: She's not with us anymore
   - text: "*\u0445\u043D\u044B\u043A*"
-    englishText: 
+    englishText: '*sobbing*'
   - text: "*\u0445\u043D\u044B\u043A*"
-    englishText: 
+    englishText: '*sobbing*'
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: 226d829a1a35cd149a4a94b382c0055d, type: 2}

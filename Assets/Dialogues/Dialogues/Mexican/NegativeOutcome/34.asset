@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 34
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 7701a5084a9ebd3479b548e4580e25f1, type: 2}
+  text: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u044D\u0442\u043E \u043A\u043E\u043D\u0435\u0446"
+  textInEnglish: It seems that this is the end
+  options:
+  - text: "\u041F\u0440\u0438\u043D\u044F\u0442\u044C \u0441\u0432\u043E\u044E \u0443\u0447\u0430\u0441\u0442\u044C"
+    textInEnglish: Accept your fate
+    dialogue: {fileID: 11400000, guid: f2b2d7bc82daa0540b4ed1ac3a15acd0, type: 2}

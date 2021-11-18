@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 49b3d19b82d46484bbe17b9915cf6d35, type: 2}
+  lines:
+  - text: "*\u0410\u043C\u043E\u0433\u0443\u0441 \u043D\u0435 \u0431\u044B\u043B
+      \u043F\u0440\u0435\u0434\u0430\u0442\u0435\u043B\u0435\u043C*"
+    englishText: '*Amogus wasn''t imposter*'
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 11400000, guid: e504dd8c28531ae4f8a11d353ffedb0e, type: 2}

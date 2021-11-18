@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 2
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 244f72b4791d26c46b999c085989d807, type: 2}
+  text: ...
+  textInEnglish: ...
+  options:
+  - text: "\u0422\u044B \u043A\u0442\u043E?"
+    textInEnglish: Who are you?
+    dialogue: {fileID: 11400000, guid: 2625beb059803b343a042d933c5566db, type: 2}
+  - text: "[ \u0421\u043B\u0443\u0448\u0430\u0442\u044C \u0434\u0430\u043B\u044C\u0448\u0435
+      ]"
+    textInEnglish: '[ Keep listening ]'
+    dialogue: {fileID: 11400000, guid: fda808b015381f5469123bfca2e083da, type: 2}

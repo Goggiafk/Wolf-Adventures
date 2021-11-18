@@ -11,7 +11,7 @@ public class Exodus : ScriptableObject
     public float happinesAmount;
     public float developmentAmount;
     public string nameOfExodus;
-    public int exodusInt;
+    public byte exodusInt;
     public bool spawnNext;
     public bool HideCurrentCharacter;
 }

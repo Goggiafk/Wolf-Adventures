@@ -15,10 +15,12 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: "\u042F \u0441\u0430\u043C \u043F\u0440\u043E\u0440\u0432\u0430\u043B\u0441\u044F!"
+    englishText: I broke through myself!
   - text: "\u0423 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C \u0422\u0420\u0415\u0411\u041E\u0412\u0410\u041D\u0418\u042F"
+    englishText: I have some DEMANDS
   - text: "\u0412 \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435
       \u0411\u0423\u0423\u0423\u041D\u0414"
+    englishText: Otherwise, BOYCOTT
   choice: {fileID: 11400000, guid: dca32e2695ebe9440b0d4c5c2944ed7c, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}
-  check: 0

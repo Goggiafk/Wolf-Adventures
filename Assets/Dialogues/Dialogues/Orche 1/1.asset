@@ -15,9 +15,9 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: "\u041E\u0442\u0441\u0442\u0430\u043D\u044C\u0442\u0435 \u043E\u0442 \u043C\u0435\u043D\u044F"
-    englishText: 
+    englishText: Leave me alone
   - text: "\u0412\u0430\u043C \u0437\u0434\u0435\u0441\u044C \u043D\u0435 \u0440\u0430\u0434\u044B"
-    englishText: 
+    englishText: You are not welcome here
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}

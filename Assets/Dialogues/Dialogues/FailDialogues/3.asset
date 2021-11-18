@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 49b3d19b82d46484bbe17b9915cf6d35, type: 2}
+  lines:
+  - text: "\u041F\u043E\u0441\u043B\u0435 \u043F\u043E\u0431\u0435\u0434\u044B \u043D\u0430\u0434
+      \u041C\u0435\u043A\u0441\u0438\u043A\u0430\u043D\u0446\u0435\u043C"
+    englishText: After the victory over the Mole
+  - text: "\u0412\u0441\u0435 \u043F\u043E\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0431\u044B\u043B\u0438
+      \u043F\u0440\u043E \"\u0432\u043E\u0441\u0441\u0442\u0430\u043D\u0438\u0435\""
+    englishText: Everyone hastily forgot about the "uprising"
+  - text: "\u0423 \u0432\u0430\u0441 \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0435\u0442
+      \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u0441 \u0431\u0443\u043D\u0442\u0430\u0440\u044F\u043C\u0438"
+    englishText: You don't have any more problems with the rebels
+  - text: "\u0412\u0430\u0441 \u0436\u0434\u0451\u0442 \u0435\u0449\u0451 \u0434\u043E\u043B\u0433\u043E\u0435
+      \u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0434\u043E \u0441\u0430\u043C\u043E\u0439
+      \u0441\u0442\u0430\u0440\u043E\u0441\u0442\u0438"
+    englishText: You will have a long reign until your old age
+  - text: "\u041D\u043E \u0441\u0442\u043E\u0438\u043B\u043E \u043B\u0438 \u043E\u043D\u043E
+      \u0442\u043E\u0433\u043E?"
+    englishText: But was it worth it?
+  - text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0438\u0433\u0440\u0443!"
+    englishText: Thank you for playing!
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 11400000, guid: f8fef564724204249aa572cafbcc6bcf, type: 2}

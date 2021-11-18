@@ -15,7 +15,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: "\u0422\u0432\u043E\u044E\u0436 \u043C\u0430\u0442\u044C..."
-    englishText: 
+    englishText: God damn it
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: 74359b079b391b3438a32e56846dc09a, type: 2}

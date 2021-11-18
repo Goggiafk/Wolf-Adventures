@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 10
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
+  lines:
+  - text: "\u041A\u0430\u043A \u043D\u0435\u0443\u043A\u043B\u044E\u0436\u0435"
+    englishText: How clumsy
+  - text: "\u0411\u043E\u043B\u044C\u0448\u0435 \u043D\u043E\u0436\u0435\u0439 \u0432\u0430\u043C
+      \u043D\u0435 \u0434\u0430\u0434\u0438\u043C"
+    englishText: We won't give you any more knives
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 11400000, guid: 40bde5ab04a5b214e871cb713fb18757, type: 2}

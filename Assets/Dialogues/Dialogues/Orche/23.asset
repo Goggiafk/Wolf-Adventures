@@ -15,7 +15,7 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: (0_0)
+    englishText: (0_0)
   choice: {fileID: 11400000, guid: 468475e6f0a5e8d409cdef6e64ba295a, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}
-  check: 0

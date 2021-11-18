@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 6
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
+  lines:
+  - text: "\u0412\u043E\u0442 \u0432\u0430\u043C 3 \u043D\u043E\u0436\u0430"
+    englishText: Here are 3 knives for you
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 45dd2b6e165380442b0a1bf7f629090e, type: 2}
+  consequence: {fileID: 11400000, guid: 38feabef7e28e5349ac10dd321ef480f, type: 2}

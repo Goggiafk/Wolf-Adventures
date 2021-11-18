@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81c58c8fbed22c0478ec3ba8ad802c5e, type: 3}
   m_Name: OrcheDead
   m_EditorClassIdentifier: 
-  moneyAmount: -20
-  foodAmount: 20
-  happinesAmount: -20
-  developmentAmount: 20
+  moneyAmount: -10
+  foodAmount: -7
+  happinesAmount: -30
+  developmentAmount: -20
   nameOfExodus: Orche
   exodusInt: 0
   spawnNext: 1
+  HideCurrentCharacter: 0

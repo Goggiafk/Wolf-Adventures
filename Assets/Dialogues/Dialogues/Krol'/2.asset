@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: ea86ba0bad98ca344953e0d3ed9ece78, type: 2}
   text: "\u041F\u0440\u043E\u0439\u0442\u0438 \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u0435?"
   textInEnglish: Take the tutorial?
-  character: {fileID: 11400000, guid: ea86ba0bad98ca344953e0d3ed9ece78, type: 2}
   options:
   - text: "\u0414\u0430, \u0443\u0447\u0438 \u043C\u0435\u043D\u044F \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E"
     textInEnglish: Yes, I'd like to

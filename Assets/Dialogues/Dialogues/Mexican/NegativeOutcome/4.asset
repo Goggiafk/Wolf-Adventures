@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 1b0168afaf913af4cabdae1400f95d27, type: 2}
+  lines:
+  - text: "\u0412\u0441\u0451 \u043A\u043E\u043D\u0447\u0435\u043D\u043E"
+    englishText: Everything's over
+  - text: "\u0422\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B"
+    englishText: You lost
+  choice: {fileID: 11400000, guid: 114a49fc4958feb4ca78e636eca5fc62, type: 2}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 0}

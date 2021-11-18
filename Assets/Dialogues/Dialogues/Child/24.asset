@@ -16,13 +16,13 @@ MonoBehaviour:
   lines:
   - text: "\u041C\u043E\u044E \u043C\u0430\u043C\u0443 \u043D\u0430\u0448\u0451\u043B
       \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E \u043D\u0430\u0448 \u0441\u043E\u0441\u0435\u0434"
-    englishText: 
+    englishText: My neighbor accidentally found my mom
   - text: "\u041E\u043D\u0430 \u0443\u043C\u0435\u0440\u043B\u0430..."
-    englishText: 
+    englishText: She's dead
   - text: "\u042D\u0422\u041E \u0412\u0421\u0401 \u0422\u0412\u041E\u042F \u0412\u0418\u041D\u0410!"
-    englishText: 
+    englishText: IT'S ALL YOUR FAULT!
   - text: "\u041D\u0415\u041D\u0410\u0412\u0418\u0416\u0423!"
-    englishText: 
+    englishText: I HATE YOU!
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: d1cf43b843853094381c784c8a3444d4, type: 2}

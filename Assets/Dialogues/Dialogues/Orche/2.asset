@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  text: ...
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
+  text: ...
+  textInEnglish: ...
   options:
   - text: "\u0427\u0435\u0433\u043E \u0442\u0435\u0431\u0435, \u0441\u043E\u043B\u043D\u044B\u0448\u043A\u043E?"
+    textInEnglish: What do you want?
     dialogue: {fileID: 11400000, guid: 01022be802cf81843a59852eeadd3652, type: 2}
   - text: "\u041A\u0442\u043E \u0432\u043F\u0443\u0441\u0442\u0438\u043B \u044D\u0442\u043E\u0433\u043E
-      \u0434\u0430\u0443\u043D\u0430 \u0441\u044E\u0434\u0430?"
+      \u043E\u0440\u043A\u0430 \u0441\u044E\u0434\u0430?"
+    textInEnglish: Who let this orche in?
     dialogue: {fileID: 11400000, guid: 4f13a907a78ca1040b171923150a7403, type: 2}

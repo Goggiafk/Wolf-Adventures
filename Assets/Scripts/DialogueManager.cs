@@ -1,4 +1,4 @@
-﻿using Steamworks;
+﻿
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -57,7 +57,8 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence)
         {
 
-            if ((prevLetter == '<' && letter == '/'))
+            chatText.text += letter;
+            /*if ((prevLetter == '<' && letter == '/'))
             {
                 isTagged = false;
             }
@@ -67,7 +68,7 @@ public class DialogueManager : MonoBehaviour
                 if (isTagged)
                 {
                     string tempLetter = "";
-                    if (letter == '>' || letter == 's' || letter == '<')
+                    if (letter == '>' || letter == '<')
                         tempLetter = "";
                     else
                         tempLetter += letter;
@@ -90,9 +91,9 @@ public class DialogueManager : MonoBehaviour
                     tempLetter += letter;
                 chatText.text += tempLetter;
             }
-            prevLetter = letter;
+            prevLetter = letter;*/
         }
-    }
+        }
 
     public void AdvanceLineForButton() {
         if (dialogue == null) return;
@@ -101,12 +102,16 @@ public class DialogueManager : MonoBehaviour
         if (activeLineIndex < dialogue.lines.Length)
         {
             timesClicked++;
-            Debug.Log(timesClicked);
             if (timesClicked == 1)
             {
                 StopAllCoroutines();
                 if (dialogue.lines[activeLineIndex - 1].text != null)
-                    ShitCode(dialogue.lines[activeLineIndex -1].text);
+                {
+                    if (PlayerPrefs.GetInt("_language_index") == 1)
+                        ShitCode(dialogue.lines[activeLineIndex - 1].text);
+                    else
+                        ShitCode(dialogue.lines[activeLineIndex - 1].englishText);
+                }
                 
             }
             else if (timesClicked == 2)
@@ -230,7 +235,10 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence)
         {
 
-            if ((prevLetter == '<' && letter == '/'))
+            chatText.text += letter;
+            mainSource.PlayOneShot(clip);
+            yield return new WaitForSeconds(delay);
+            /*if ((prevLetter == '<' && letter == '/'))
             {
                 isTagged = false;
             }
@@ -267,7 +275,7 @@ public class DialogueManager : MonoBehaviour
                 mainSource.PlayOneShot(clip);
                 yield return new WaitForSeconds(delay);
             }
-            prevLetter = letter;
+            prevLetter = letter;*/
         }
         timesClicked = 1;
     }

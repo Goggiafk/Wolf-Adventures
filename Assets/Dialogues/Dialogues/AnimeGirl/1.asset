@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: a31b107dccf4d5f4c88417d8faf74b74, type: 2}
   lines:
-  - text: "\u042F \u0430\u043D\u0438\u043C\u0435 \u0441\u0443\u0447\u043A\u0430"
-    englishText: 
-  - text: "\u0410 \u0442\u044B \u043C\u043E\u0439 \u0441\u0435\u043D\u043F\u0430\u0439"
-    englishText: 
-  choice: {fileID: 0}
+  - text: "\u041F\u0440\u0438\u0432\u0435\u0442, \u0441\u0435\u043D\u043F\u0430\u0439"
+    englishText: Hey, senpai
+  choice: {fileID: 11400000, guid: bab2d12ee2d1ee24e96cc36e2671131b, type: 2}
   nextDialogue: {fileID: 0}
-  consequence: {fileID: 11400000, guid: 05367db0cc6de7247a6ffa1c5846b0d0, type: 2}
+  consequence: {fileID: 0}

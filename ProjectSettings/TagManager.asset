@@ -9,6 +9,10 @@ TagManager:
   - savebutton
   - deletebutton
   - Character
+  - scp
+  - Orche
+  - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -30,14 +30,21 @@ public class SaveData
     public float sawDust;
     public float happines;
     public float development;
+    public int stotyCharacterIdS;
     public string[] eventHolderS = new string[999];
-    public int[] eventHolderIdS = new int[999];
+    public byte[] eventHolderIdS = new byte[999];
     public string[] characterNamesS = new string[999];
     public string[] savedCharactersS = new string[999];
     public int idOfRestS;
     public string[] savedRestS = new string[999];
     public int idKokS;
     public int currentDayS;
+    public int[] optionNumS;
+    public int idOfUpgradeS;
+
+    public int peopleAgainstS;
+    public int relationWithMexS;
+    public int moneyToMexS;
     //Items
     public int numberOfItems;
     public string[] itemName = new string[5];
@@ -53,4 +60,11 @@ public class SaveData
     public string[] englishUpgradeName = new string[999];
     public int[] upgradePrice = new int[999];
     public string[] upgradeObject = new string[999];
+    //Events
+    public int idOfEventCounterS;
+    public string[] eventCountersS = new string[100];
+    public int[] whenToAppearS = new int[100];
+    public int[] eventIntsS = new int[100];
+    public int optionIdS = 0;
+    public string[] optionListS = new string[100];
 }

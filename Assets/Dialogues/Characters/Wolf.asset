@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\u0412\u0443\u043B\u044C\u0444"
   characterNameInEnglish: Wolf The King
-  characterVoice: {fileID: 8300000, guid: 22efca618f7c73540a03bedd53a7c6c7, type: 3}
+  characterVoice: {fileID: 8300000, guid: 7ac51f29fb37eca4196f43ba6de1b325, type: 3}
   characterColor: {r: 0, g: 0, b: 0, a: 1}

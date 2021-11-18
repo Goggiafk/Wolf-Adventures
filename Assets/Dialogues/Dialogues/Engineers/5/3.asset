@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 077cd8fdb8c35034fb57969ad06f9058, type: 2}
+  lines:
+  - text: "\u0423 \u043D\u0430\u0441 \u0432 \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u0438
+      \u0435\u0441\u0442\u044C \u0438\u0437\u043B\u0438\u0448\u043A\u0438 \u043A\u0430\u0434\u0440\u043E\u0432"
+    englishText: We have a surplus of personnel in the laboratory
+  - text: "\u0418 \u043C\u044B \u043C\u043E\u0436\u0435\u043C \u043F\u043E\u0441\u043B\u0430\u0442\u044C
+      \u0447\u0430\u0441\u0442\u044C \u0438\u043D\u0436\u0435\u043D\u0435\u0440\u043E\u0432
+      \u043F\u043E\u043C\u043E\u0447\u044C \u043D\u0430 \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F\u0445"
+    englishText: And we can send some engineers to help at the enterprises
+  - text: "\u041E\u0434\u043D\u0430\u043A\u043E \u0438\u043D\u0436\u0435\u043D\u0435\u0440\u043E\u0432
+      \u0445\u0432\u0430\u0442\u0438\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u043D\u0430
+      \u043E\u0434\u043D\u043E \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u0435..."
+    englishText: However, there are only enough engineers for one thing...
+  - text: "\u0418\u0442\u0430\u043A, \u043A\u0443\u0434\u0430 \u043C\u044B \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u043C
+      \u0438\u043D\u0436\u0435\u043D\u0435\u0440\u043E\u0432?"
+    englishText: So, where will we send the engineers?
+  choice: {fileID: 11400000, guid: eb6701dad99fc9b4594f88936fa09262, type: 2}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 0}

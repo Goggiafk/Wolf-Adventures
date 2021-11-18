@@ -6,11 +6,16 @@ public class ColliderScriprt : MonoBehaviour
 {
     public MapManagment mapManagment;
     public GameObject spawnPoint;
+    public AchievementManager manager;
+
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (this.gameObject.name == "towerEnter")
+        if (other.tag == "Player")
             mapManagment.enableLocation(spawnPoint);
         if (this.gameObject.name == "towerFall")
-            mapManagment.enableLocation(spawnPoint);
+            manager.SetAchievement("NEW_ACHIEVEMENT_1_1");
+
     }
+
+
 }

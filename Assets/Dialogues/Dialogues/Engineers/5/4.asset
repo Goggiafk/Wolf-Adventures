@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 077cd8fdb8c35034fb57969ad06f9058, type: 2}
+  text: ...
+  textInEnglish: ...
+  options:
+  - text: "\u041D\u0430 \u0444\u0435\u0440\u043C\u0443!"
+    textInEnglish: To the farm!
+    dialogue: {fileID: 11400000, guid: 013beaa1040263c44a252fa9f6028ed0, type: 2}
+  - text: "\u0412 \u0448\u0430\u0445\u0442\u044B!"
+    textInEnglish: To the mines!
+    dialogue: {fileID: 11400000, guid: 4e22c07a903f7464e9ea9372b5e0fe22, type: 2}

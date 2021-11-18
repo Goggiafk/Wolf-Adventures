@@ -15,10 +15,10 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
   lines:
   - text: "\u041D\u0435 \u043D\u0430\u0434\u043E!"
-    englishText: 
+    englishText: Please, no!
   - text: "\u0423 \u043C\u0435\u043D\u044F \u0435\u0449\u0451 \u043D\u0435\u043F\u0440\u0438\u0437\u044B\u0432\u043D\u043E\u0439
       \u0432\u043E\u0437\u0440\u0430\u0441\u0442"
-    englishText: 
+    englishText: I'm still underaged
   choice: {fileID: 0}
   nextDialogue: {fileID: 11400000, guid: 74146895dd475ff47ae5f229b2c078c2, type: 2}
   consequence: {fileID: 0}

@@ -1,5 +1,4 @@
-﻿using Steamworks;
-using System.Collections;
+﻿using System.Collections;
 using System.IO;
 using TMPro;
 //using UnityEditorInternal;
@@ -11,6 +10,8 @@ public class ExodusManager : MonoBehaviour
 {
     [Header("All the references")]
 
+
+    public EndScript endScript;
     public AchievementManager achievementManager;
     public static ExodusManager Instance;
     public ChoiceManager choiceManager;
@@ -21,13 +22,21 @@ public class ExodusManager : MonoBehaviour
     public Image sawDust;
     public Image happines;
     public Image development;
-
+    
     public Image sawDustLogo;
     public Image happinesLogo;
     public Image developmentLogo;
 
+    public AudioClip endingClip;
+    public AudioSource mainSource;
+
     public Sprite[] spritesForParams;
-    public GameObject loadText;
+
+    public GameObject endScreen;
+
+    public GameObject collidersOfCamera;
+
+    public GameObject cameraObj;
 
     [Header("Character & Atributes Lists")]
 
@@ -36,7 +45,7 @@ public class ExodusManager : MonoBehaviour
     public GameObject[] allCharacters;
     public string[] characterNames;
     public GameObject[] characters;
-    GameObject[] storyCharacters = new GameObject[10];
+    public GameObject[] storyCharacters = new GameObject[10];
     int storyCharacterId = 0;
     public GameObject[] exodusCharacters = new GameObject[10];
     int exodusCharacterId = 0;
@@ -45,6 +54,7 @@ public class ExodusManager : MonoBehaviour
     int idOfRest = 0;
     private string[] savedRest = new string[100];
     int idOfUpgrade = 0;
+    public GameObject[] endAtributes;
 
     
 
@@ -53,7 +63,12 @@ public class ExodusManager : MonoBehaviour
 
     [Header("Some variables")]
 
+    public static int peopleAgainst = 0;
+    public static int relationWithMex = 0;
+    public static int moneyToMex = 0;
+
     int currentDay = 0;
+
     int charactersToSpawn = 3;
     bool toSpawn = true;
     bool toHide = false;
@@ -61,15 +76,20 @@ public class ExodusManager : MonoBehaviour
     Color s;
     Image rend;
     Image logoRend;
-    float moneyAmmount = 50;
+    float moneyAmmount = 49;
     float sawDustAmmount = 50;
     float happinesAmmount = 50;
     float developmentAmmount = 50;
 
     int idOfItem = 0;
 
-    int eventCounterChild;
-    int eventIntChild;
+    public string[] eventCounters = new string[100];
+    public int[] whenToAppear = new int[100];
+    public int[] eventInts = new int[100];
+    int idOfEventCounter = 0;
+
+
+    bool zackEvent = false;
 
     [Header("UI Elements")]
 
@@ -82,7 +102,7 @@ public class ExodusManager : MonoBehaviour
     public Button dayOverButton;
 
     public GameObject ui;
-    public GameObject endScreen;
+    public GameObject finishGame;
     public GameObject endScreenElements;
     public GameObject logo;
     public GameObject dayOverMenu;
@@ -90,11 +110,16 @@ public class ExodusManager : MonoBehaviour
     public GameObject someUI;
     public GameObject someButton;
 
+    public GameObject buttonsPop;
+
     public GameObject insideAll;
     int idKok = 0;
     private string[] eventHolder = new string[999];
-    private int[] eventHolderId = new int[999];
+    private byte[] eventHolderId = new byte[999];
 
+    public GameObject sticks;
+    public GameObject endstick;
+    public GameObject warning;
     public struct UpgradeInfo
     {
         public string name;
@@ -122,7 +147,6 @@ public class ExodusManager : MonoBehaviour
     public Item[] itemList = new Item[10];
     void Awake()
     {
-        loadText.SetActive(true);
         if (Instance == null)
         {
             Instance = this;
@@ -134,13 +158,13 @@ public class ExodusManager : MonoBehaviour
         }
         if (PlayerPrefs.HasKey("LoadScene"))
         {
-            
+            sticks.SetActive(false);
+            buttonsPop.SetActive(false);
             dayOverMenu.SetActive(true);   
             Start();
             LoadAll(PlayerPrefs.GetString("LoadScene"));
             PlayerPrefs.DeleteKey("LoadScene");
         }
-        loadText.SetActive(false);
     }
     public void Change(Exodus _exodus)
     {
@@ -196,8 +220,10 @@ public class ExodusManager : MonoBehaviour
     /// </summary>
     public void Start()
     {
-        ChoiceManager.optionList[0] = "noz";
-        if(currentDay < 1)
+        dayOverButton.interactable = false;
+        
+        
+        if (currentDay < 1)
         {
             NextDay();
         }
@@ -262,41 +288,131 @@ public class ExodusManager : MonoBehaviour
         savedRest[idOfRest] = _object.name;
         idOfRest++;
     }
+    public void removeRest(GameObject _object)
+    {
+        for (int i = 0; i < idOfRest; i++)
+        {
+           if( savedRest[i] == _object.name)
+            {
+                savedRest[i] = null;
+            }
+        }
+    }
+
+
     private void CheckEvents()
     {
-        
-        
+
+
         for (int i = 0; i < eventHolder.Length; i++)
         {
 
 
             switch (eventHolder[i])
             {
+                case "worse":
+                    relationWithMex++;
+                    break;
+                case "badly":
+                    peopleAgainst++;
+                    break;
                 case "logo":
+
+                    
+                    storyCharacters[storyCharacterId] = allCharacters[11];
+                    storyCharacterId = 1;
                     idKok++;
                     eventHolder[idKok] = "beflogo"; 
-                    StartCoroutine(FadeLogo(() => { RandomCharacter(); }));
+                    StartCoroutine(FadeLogo(() => { StoryCharacter(); }));
                     addRest(allLocations[1]);
                     allLocations[1].SetActive(true);
-                    
+                    addRest(allLocations[4]);
+                    allLocations[4].SetActive(true);
+
+                    addRest(allLocations[3]);
+                    allLocations[3].SetActive(true);
+
+                    addRest(allLocations[5]);
+                    allLocations[5].SetActive(true);
+
+                    allCharacters[3].SetActive(false);
+
                     break;
                 case "beflogo":
                     allCharacters[4].SetActive(false);
                     currentCharacter.SetActive(false);
+                    break;
+                case "Citizen1":
+                    allCharacters[14].SetActive(true);
+                    addRest(allCharacters[14]);
+                    switch (eventHolderId[i])
+                    {
+                        case 0:
+                            atributes[20].SetActive(true);
+                            addRest(atributes[20]);
+                            break;
+                        case 1:
+                            atributes[21].SetActive(true);
+                            addRest(atributes[21]);
+                            peopleAgainst++;
+                            break;
+                    }
+                    break;
+                case "nozik":
+                    ChoiceManager.optionList[ChoiceManager.optionId] = "noz";
+                    ChoiceManager.optionNum[ChoiceManager.optionId] = 0;
+                    ChoiceManager.optionId++;
+                    break;
+                case "ScaryPark":
+                    allLocations[12].SetActive(true);
+                    addRest(allLocations[12]);
+                    storyCharacters[storyCharacterId] = allCharacters[22];
+                    storyCharacterId++;
+                    break;
+                case "Citizen2":
+                    allCharacters[15].SetActive(true);
+                    addRest(allCharacters[15]);
+                    switch (eventHolderId[i])
+                    {
+                        case 0:
+                            atributes[22].SetActive(true);
+                            warning.SetActive(true);
+                            addRest(atributes[22]);
+                            break;
+                        case 1:
+                            atributes[23].SetActive(true);
+                            warning.SetActive(true);
+                            addRest(atributes[23]);
+                            peopleAgainst++;
+                            break;
+                    }
+                    break;
+                case "Citizen3":
+                    adTheGet("Рецепт", "Recipe", "Для замечательной кукурузы", "For wonderful corn", "recipe", 5, 'F');
                     break;
                 case "Orche":
                     allCharacters[0].SetActive(false);
                     switch (eventHolderId[i])
                     {
                         case 0:
+                            peopleAgainst += 2;
                             break;
+
                         case 1:
                             allCharacters[1].SetActive(true);
+                            addRest(allCharacters[1]);
                             atributes[0].SetActive(true);
+                            addRest(atributes[0]);
+                            moneyToMex++;
+                            warning.SetActive(true);
                             break;
                         case 2:
                             allCharacters[1].SetActive(true);
+                            addRest(allCharacters[1]);
                             atributes[1].SetActive(true);
+                            addRest(atributes[1]);
+                            peopleAgainst++;
+                            warning.SetActive(true);
                             break;
                     }
                     break;
@@ -309,6 +425,7 @@ public class ExodusManager : MonoBehaviour
                 case "tutorial1":
                     StartCoroutine(JustFade(() => { currentCharacter.SetActive(false) ;}));
                     allCharacters[3].SetActive(true);
+                    warning.SetActive(true);
                     allLocations[1].SetActive(true);
                     break;
                 case "tutorial2":
@@ -322,31 +439,280 @@ public class ExodusManager : MonoBehaviour
                     storyCharacterId++;
                     break;
                 case "shelter":
-                    RelistUpgrades("Приют", "Orphanage", 15, allLocations[5], idOfUpgrade);
+                    RelistUpgrades("Приют", "Orphanage", 5, allLocations[8], idOfUpgrade);
                     break;
+                case "helpEvent":
+                    ChoiceManager.optionList[ChoiceManager.optionId] = "help";
+                    ChoiceManager.optionNum[ChoiceManager.optionId] = 1;
+                    ChoiceManager.optionId++;
+                    break;
+                
                 case "expedition":
+                    eventCounters[idOfEventCounter] = "child";
                     switch (eventHolderId[i])
                     {
                         case 0:
-                            eventCounterChild = currentDay + 1;
+                            whenToAppear[idOfEventCounter] = currentDay + 2;
                             break;
                         case 1:
-                            eventCounterChild = currentDay + 2;
+                            whenToAppear[idOfEventCounter] = currentDay + 2;
                             break;
                         case 2:
-                            eventCounterChild = currentDay + 3;
+                            whenToAppear[idOfEventCounter] = currentDay + 3;
                             break;
                     }
                     
-                    eventIntChild = eventHolderId[i];
+                    eventInts[idOfEventCounter] = eventHolderId[i];
+                    idOfEventCounter++;
                     break;
+                case "GoldStory":
+                    whenToAppear[idOfEventCounter] = currentDay + 2;
+                    eventCounters[idOfEventCounter] = "zack";
+                    idOfEventCounter++;
+                    switch (eventHolderId[i])
+                    {
+                        case 0:
+                            adTheGet("Свистулька", "The Whistle", "Свистулька Зака — обычный по конструкции свисток, сделанный из неизвестного дерева, по ощущениям отдающим каким-то неестественным холодом, " +
+                        "как будто от металла. На свистульке присутствуют трещины и сколы, из-за чего использование его по назначению невозможно, скорее всего, для владельца эта вещица имела некое другое значение. " +
+                        "С боку небрежно вырезано имя Зак. ИЗбавиться от неё можно только за 30 монет", "Reduces happiness everyday while in inventory", "Svistulka", -30, 'M');
+                            ChoiceManager.optionList[ChoiceManager.optionId] = "bag";
+                            ChoiceManager.optionNum[ChoiceManager.optionId] = 0;
+                            ChoiceManager.optionId++;
+                            break;
+                        case 1:
+                            atributes[8].SetActive(true);
+                           
+                            addRest(atributes[8]);
+                            ChoiceManager.optionList[ChoiceManager.optionId] = "bag";
+                            ChoiceManager.optionNum[ChoiceManager.optionId] = 1;
+                            ChoiceManager.optionId++;
+                            break;
+                    }
+                    break;
+                case "removeSvistulka":
+                    RemoveItem("Свистулька");
+                    break;
+                case "giveBagBack":
+                    atributes[8].SetActive(false);
+                    removeRest(atributes[8]);
+                    eventCounters[idOfEventCounter] = "zackBless";
+                    whenToAppear[idOfEventCounter] = 0;
+                    idOfEventCounter++;
+                    break;
+                case "doNotGiveMoney":
+                    atributes[8].SetActive(false);
+                    adTheGet("Свистулька", "The Whistle", "Свистулька Зака — обычный по конструкции свисток, сделанный из неизвестного дерева, по ощущениям отдающим каким-то неестественным холодом, " +
+                        "как будто от металла. На свистульке присутствуют трещины и сколы, из-за чего использование его по назначению невозможно, скорее всего, для владельца эта вещица имела некое другое значение. " +
+                        "С боку небрежно вырезано имя Зак. ИЗбавиться от неё можно только за 30 монет", "Reduces happiness everyday while in inventory", "Svistulka", -30, 'M');
+                    break;
+
+
+                case "endGood":
+                    collidersOfCamera.SetActive(false);
+                    managmentMap.justEnableLocation(endAtributes[2]);
+                    CameraScript.moveCamera(endAtributes[0].transform.position, cameraObj);
+                    endAtributes[3].SetActive(true);
+                    endAtributes[11].SetActive(false);
+                    endAtributes[0].SetActive(false);
+                    break;
+
                 case "ending":
-                    managmentMap.enableLocation(atributes[7]);
+                    sticks.SetActive(false);
+                    endstick.SetActive(true);
+                    ui.SetActive(false);
+                    managmentMap.enableLocation(atributes[16]);
+                    CameraScript.moveCamera(endAtributes[14].transform.position, cameraObj);
+                    atributes[14].SetActive(false);
+                    atributes[15].SetActive(true);
+                    atributes[17].GetComponent<BoxCollider2D>().enabled = false;
+                    atributes[17].GetComponent<CircleCollider2D>().enabled = false;
                     toSpawn = false;
                     allCharacters[6].SetActive(true);
+                    mainSource.clip = endingClip;
+                    mainSource.Play();
+                    
+                    ui.SetActive(false);
+                    dayOverButton.gameObject.SetActive(false);
+                    break;
+                case "showResults":
+                    finishGame.SetActive(true);
+                    endScript.appearScript();
                     break;
                 case "boloto":
                     allLocations[2].SetActive(true);
+                    warning.SetActive(true);
+                    break;
+                case "TrainLanky":
+                    achievementManager.RequestStats();
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_3");
+                    break;
+                case "refuseBebej":
+                    StartCoroutine(JustFade(() => { allCharacters[8].SetActive(true); allCharacters[9].transform.eulerAngles += new Vector3(0, 180, 0); }));
+                    
+                    break;
+
+                case "BebejLeaves":
+                    allCharacters[8].SetActive(false);
+                    allCharacters[9].transform.eulerAngles -= new Vector3(0, 180, 0);
+                    break;
+                case "GiveMoney":
+                    whenToAppear[idOfEventCounter] = currentDay + 1;
+                    eventCounters[idOfEventCounter] = "casino";
+                    eventInts[idOfEventCounter] = eventHolderId[i];
+                    switch (eventHolderId[i])
+                    {
+                        case 0:
+                            moneyAmmount -= 2;
+                            break;
+                        case 1:
+                            moneyAmmount -= 5;
+                            break;
+                        case 2:
+                            moneyAmmount -= 10;
+                            break;
+                    }
+                    idOfEventCounter++;
+                    break;
+                case "OrganiseRebell":
+                   
+                    whenToAppear[idOfEventCounter] = currentDay + 1;
+                    eventCounters[idOfEventCounter] = "OrganiseRebell";
+                    eventInts[idOfEventCounter] = eventHolderId[i];
+                    
+                    idOfEventCounter++;
+                    break;
+                case "orchAppeal":
+                    endAtributes[11].SetActive(true);
+                    endAtributes[0].SetActive(true);
+                    var orches = endAtributes[0].GetComponentsInChildren<Transform>();
+                    for (int j = 1; j < orches.Length; j++)
+                    {
+                        orches[j].eulerAngles += new Vector3(0, 180, 0);
+                    }
+                    managmentMap.justEnableLocation(endAtributes[2]);
+                    collidersOfCamera.SetActive(false);
+                    CameraScript.moveCamera(endAtributes[0].transform.position, cameraObj);
+                    break;
+                case "OrcheWolf":
+                    var orches1 = endAtributes[0].GetComponentsInChildren<Transform>();
+                    for (int j = 1; j < orches1.Length; j++)
+                    {
+                        orches1[j].eulerAngles -= new Vector3(0, 180, 0);
+                    }
+                    break;
+                case "OrcheRight":
+                    var orches2= endAtributes[0].GetComponentsInChildren<Transform>();
+                    for (int j = 1; j < orches2.Length; j++)
+                    {
+                        orches2[j].eulerAngles += new Vector3(0, 180, 0);
+                    }
+                    break;
+                case "CatchMex":
+                    Debug.Log("lol");
+                   StartCoroutine(JustFade(() => { endAtributes[3].SetActive(true); endAtributes[0].SetActive(false); endAtributes[1].SetActive(false); }));
+                    break;
+                case "mexishere":
+                    
+                   StartCoroutine(JustFade(() => { endAtributes[24].SetActive(true); endAtributes[3].SetActive(false); endAtributes[0].SetActive(false); endAtributes[1].SetActive(false); }));
+                    break;
+                case "SlayTheMex":
+                    mainSource.Stop();
+                    endAtributes[25].SetActive(true);
+                   StartCoroutine(Timer(3, () => { StartCoroutine(JustFade(() => { mainSource.Play(); endAtributes[23].SetActive(true); CameraScript.moveCamera(endAtributes[7].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[7]);  }));  }));
+                    break;
+
+                case "BadEnd":
+                    
+                    endAtributes[5].SetActive(true);
+                    collidersOfCamera.SetActive(false);
+                    CameraScript.moveCamera(endAtributes[4].transform.position, cameraObj);
+                    managmentMap.justEnableLocation(endAtributes[4]);
+
+                    //StartCoroutine(JustFade(() => { CameraScript.moveCamera(endAtributes[4].transform.position, cameraObj); }));
+                    break;
+                case "SaveEnd":
+                    atributes[17].SetActive(false);
+                    atributes[18].SetActive(true);
+                    endAtributes[15].SetActive(false);
+                    StartCoroutine(Timer(5, () => {
+                        atributes[17].SetActive(true);
+                        atributes[18].SetActive(false); CameraScript.moveCamera(endAtributes[6].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[6]); }));
+                    break;
+                case "EscapeEnd":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_12");
+                    atributes[17].SetActive(false);
+                    StartCoroutine(JustFade(() => { CameraScript.moveCamera(endAtributes[18].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[18]); }));
+                    break;
+                case "Convience":
+                    
+                    StartCoroutine(JustFade(() => {
+                        endAtributes[5].SetActive(true);
+                        endAtributes[21].SetActive(false);
+                        endAtributes[10].SetActive(false);
+                        endAtributes[19].SetActive(true);
+                    }));
+                    break;
+                case "StayOnKnees":
+
+                    atributes[17].SetActive(false);
+                    endAtributes[12].SetActive(true);
+                    break;
+                case "SlayMex":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_11");
+                    mainSource.Stop();
+                    atributes[17].SetActive(false);
+                    endAtributes[15].SetActive(true);
+                    StartCoroutine(Timer(2, () => { mainSource.Play(); endAtributes[16].SetActive(true); })) ;
+                    break;
+                case "StayOnKnees2":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_14");
+                    StartCoroutine(JustFade(() => { CameraScript.moveCamera(endAtributes[13].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[13]); }));
+                    
+                    break;
+                case "SlayMex2":
+                    endAtributes[15].SetActive(false);
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_11");
+                    atributes[17].SetActive(false);
+                    atributes[19].SetActive(true);
+                    mainSource.Stop();
+                    StartCoroutine(Timer(5, () => {
+                        StartCoroutine(JustFade(() => { mainSource.Play(); endAtributes[17].SetActive(true); endAtributes[9].SetActive(false); CameraScript.moveCamera(endAtributes[7].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[7]); }));
+                    }));
+                    break;
+                case "SlayWolf":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_10");
+                    atributes[17].SetActive(false);
+                    atributes[19].SetActive(true);
+                    mainSource.Stop();
+                    StartCoroutine(Timer(5, () =>{ StartCoroutine(JustFade( () => { mainSource.Play(); endAtributes[8].SetActive(true); endAtributes[9].SetActive(false); CameraScript.moveCamera(endAtributes[7].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[7]); }));
+                    }));
+                    break;
+                case "SlayWolfMex":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_8");
+                    atributes[17].SetActive(false);
+                    atributes[19].SetActive(true);
+                    mainSource.Stop();
+                    StartCoroutine(Timer(5, () => {
+                        StartCoroutine(JustFade(() => { mainSource.Play(); endAtributes[20].SetActive(true); CameraScript.moveCamera(endAtributes[7].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[7]); }));
+                    }));
+                    break;
+                case "WolfAndMex":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_9");
+                    StartCoroutine(JustFade(() => { mainSource.Play(); endAtributes[22].SetActive(true); CameraScript.moveCamera(endAtributes[7].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[7]); }));
+                   
+                    break;
+                case "MexEscape":
+                    achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_1");
+                    StartCoroutine(JustFade(() => { mainSource.Play(); endAtributes[23].SetActive(true); CameraScript.moveCamera(endAtributes[7].transform.position, cameraObj); managmentMap.enableLocation(endAtributes[7]); }));
+
+                    break;
+                case "TalkToMex":
+                    StartCoroutine(JustFade(() => { endAtributes[5].SetActive(false); endAtributes[10].SetActive(true); }));
+               
+                    break;
+                case "goToMenu":
+                    PlayerPrefs.SetInt("devMenu", 1);
+                    StartCoroutine(FadeToMenu());
                     break;
             }
 
@@ -365,18 +731,21 @@ public class ExodusManager : MonoBehaviour
         if (sawDustAmmount < 0)
         {
             ParametrsRestore();
+            StartCoroutine(Fade());
             CleanEvents();
             toSpawn = false;
         }
         if (happinesAmmount < 0)
         {
             ParametrsRestore();
+            StartCoroutine(Fade());
             CleanEvents();
             toSpawn = false;
         }
         if (developmentAmmount < 0)
         {
             ParametrsRestore();
+            StartCoroutine(Fade());
             CleanEvents();
             toSpawn = false;
         }
@@ -384,12 +753,22 @@ public class ExodusManager : MonoBehaviour
 
         CleanEvents();
         ReloadUI();
-        
+
+        if (toHide)
+            StartCoroutine(Timer(0.8f, () => { currentCharacter.SetActive(false); }));
         if (toSpawn)
         {
             StartCoroutine(JustFade(() => { SpawnCharacter(); }));
             
         }
+    }
+
+
+    public void addAb(string key)
+    {
+        ChoiceManager.optionList[ChoiceManager.optionId] = key;
+        ChoiceManager.optionNum[ChoiceManager.optionId] = 1;
+        ChoiceManager.optionId++;
     }
 
     public void DownParams()
@@ -422,9 +801,14 @@ public class ExodusManager : MonoBehaviour
 
     private void StoryCharacter()
     {
-        
+        Debug.Log(storyCharacterId);
+        storyCharacterId--;
+
         currentCharacter = storyCharacters[storyCharacterId];
+        storyCharacters[storyCharacterId] = null;
+        
         currentCharacter.SetActive(true);
+        
     }
 
     private void ExodusCharacter()
@@ -435,8 +819,7 @@ public class ExodusManager : MonoBehaviour
     }
     public void SpawnCharacter()
     {
-        if (toHide)
-            currentCharacter.SetActive(false);
+        
         if (exodusCharacterId > 0)
         {
             exodusCharacterId--;
@@ -444,7 +827,7 @@ public class ExodusManager : MonoBehaviour
         } else 
         if (storyCharacterId > 0)
         {
-            storyCharacterId--;
+            
             StoryCharacter();
         }
         else if (!(characters.Length <= 0) && charactersToSpawn > 1)
@@ -454,11 +837,24 @@ public class ExodusManager : MonoBehaviour
         } else
         {
             dayOverButton.interactable = true;
+            dayOverButton.GetComponent<Animator>().SetBool("IsDayOver", true);
         }
     }
 
     public void RandomCharacter()
     {
+        /*var randomCharacters = Resources.FindObjectsOfTypeAll<GameObject>();
+        
+        for (int i = 0; i < randomCharacters.Length; i++)
+        {
+            if (ra == characterNames[m] && child.tag == "Character")
+            {
+                temporaryCharacter[m] = child.gameObject;
+                Debug.Log(temporaryCharacter[m]);
+                m++;
+            }
+        }
+        */
         int random = Random.Range(0, characters.Length);
         characters[random].SetActive(true);
         currentCharacter = characters[random];
@@ -601,10 +997,22 @@ public class ExodusManager : MonoBehaviour
         ReloadUI();
     }
 
-    public void RelistItems(int id)
+    public void RemoveItem(string name)
     {
+        int id = 0;
+        for (int i = 0; i < itemList.Length; i++)
+        {
+            if (itemList[i].itemSprite != null)
+                if (itemList[i].name == name)
+                    id = i;
+        }
         Destroy(itemList[id].gameObject);
-        
+
+        ShuffleItems(id);
+    }
+
+    public void ShuffleItems(int id)
+    {
         itemList[id].gameObject = null;
 
         for (int i = 0; i < itemList.Length; i++)
@@ -637,6 +1045,13 @@ public class ExodusManager : MonoBehaviour
         }
     }
 
+    public void RelistItems(int id)
+    {
+        Destroy(itemList[id].gameObject);
+
+        ShuffleItems(id);
+    }
+
     /// <summary>
     /// ////////////////////UPGRADE SYSTEM
     /// </summary>
@@ -655,7 +1070,7 @@ public class ExodusManager : MonoBehaviour
         info[id].englishName = englishNameOfUpgrade;
         info[id].price = costOfUpgrade;
         info[id].upgradeObject = objectToBuy;
-        addRest(objectToBuy);
+        
         idOfUpgrade++;
 
         Debug.Log(info[id].id);
@@ -721,6 +1136,7 @@ public class ExodusManager : MonoBehaviour
         button.onClick.AddListener(() =>
         {
             activateUpgrade(info[id].upgradeObject, info[id].price, info[id].upgradeButton, id);
+            warning.SetActive(true);
         });
         info[id].upgradeButton = button;
         info[id].upgradeButton.gameObject.SetActive(true);
@@ -729,10 +1145,24 @@ public class ExodusManager : MonoBehaviour
 
     public void activateUpgrade(GameObject _object, int cost, Button button, int id)
     {
+       
         if (moneyAmmount >= cost)
         {
             Destroy(info[id].upgradeButton.gameObject);
+            addRest(_object);
             info[id].upgradeObject = null;
+            for (int i = 0; i < SaveData.current.upgradeName.Length; i++)
+            {
+                if (info[id].name == SaveData.current.upgradeName[i])
+                {
+                    SaveData.current.upgradeName[i] = null;
+                    SaveData.current.upgradeObject[i] = null;
+                    SaveData.current.upgradePrice[i] = 0;
+                    SaveData.current.englishUpgradeName[i] = null;
+                    SaveData.current.upgradeId--;
+                }
+            }
+            idOfUpgrade-- ;
             
             moneyAmmount -= cost;
             ReloadUI();
@@ -752,6 +1182,7 @@ public class ExodusManager : MonoBehaviour
     public void DayOver()
     {
         dayOverButton.interactable = false;
+        dayOverButton.GetComponent<Animator>().SetBool("IsDayOver", false);
         SaveAll(true);
     }
     public void UdpdateDay()
@@ -759,27 +1190,115 @@ public class ExodusManager : MonoBehaviour
         dayCounter.text = currentDay.ToString();
     }
 
+    public void clearCounter(int id)
+    {
+        eventCounters[id] = null;
+        whenToAppear[id] = 0;
+        eventInts[id] = 0;
+    }
+
     public void NextDay()
     {
+        moneyAmmount++;
+        ReloadUI();
         charactersToSpawn = 3;
-
+        buttonsPop.SetActive(true);
         currentDay++;
-        if (eventCounterChild == currentDay)
+        for (int i = 0; i < itemList.Length; i++)
         {
-            storyCharacters[storyCharacterId] = allCharacters[5];
-            storyCharacterId++;
-            switch (eventIntChild)
+            if (itemList[i].itemSprite != null)
             {
-                case 0:
-                    atributes[4].SetActive(true);
-                    adTheGet("Ведро", "Bucket", "Ведро, найденное на болоте", "The bucket you got from swamps", "Vedro", 10, 'M');
+                switch (itemList[i].itemSprite.name)
+                {
+                    case "Svistulka":
+                        happinesAmmount -= 2;
+                        ReloadUI();
+                        break;
+                }
+            }
+        }
+
+        for (int i = 0; i < idOfEventCounter; i++)
+        {
+            Debug.Log(eventCounters[i]);
+            if (eventCounters[i] == "zackBless")
+            {
+                happinesAmmount += 1;
+                ReloadUI();
+            }
+
+            if (whenToAppear[i] == currentDay)
+            {
+                switch (eventCounters[i])
+                {
+                case "child":
+                    
+                        storyCharacters[storyCharacterId] = allCharacters[5];
+                        storyCharacterId++;
+                        switch (eventInts[i])
+                        {
+                            case 0:
+                                atributes[4].SetActive(true);
+                                adTheGet("Реликвия", "Relic", "Предмет, данный ребенком", "Item given by child", "relic", 10, 'M');
+                                achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_6");
+                                allCharacters[10].SetActive(false);
+                                break;
+                            case 1:
+                                atributes[5].SetActive(true);
+                                atributes[11].SetActive(false);
+                                atributes[12].SetActive(true);
+                                break;
+                            case 2:
+                                atributes[6].SetActive(true);
+                                atributes[11].SetActive(false);
+                                atributes[12].SetActive(true);
+                                break;
+                                
+                        }
+                        clearCounter(i);
+                    
                     break;
-                case 1:
-                    atributes[5].SetActive(true);
+                case "zack":
+                  
+                        storyCharacters[storyCharacterId] = allCharacters[7];
+                        storyCharacterId++;
+                    
                     break;
-                case 2:
-                    atributes[6].SetActive(true);
-                    break;
+                case "OrganiseRebell":
+                        storyCharacters[storyCharacterId] = allCharacters[21];
+                        storyCharacterId++;
+                        break;
+                case "casino":
+                        storyCharacters[storyCharacterId] = allCharacters[9];
+                        storyCharacterId++;
+                        int fortune = Random.RandomRange(1, 10);
+                        
+                        if (fortune > 7)
+                        {
+                            achievementManager.RequestStats();
+                            achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_4");
+                            switch (eventInts[i])
+                            {
+                                case 0:
+                                    moneyAmmount += 6;
+                                    break;
+                                case 1:
+                                    moneyAmmount += 15;
+                                    break;
+                                case 2:
+                                    moneyAmmount += 30;
+                                    break;
+                            }
+                            atributes[10].SetActive(true);
+                        }
+                        else
+                        {
+                            achievementManager.SetAchievement("NEW_ACHIEVEMENT_1_7");
+                            atributes[9].SetActive(true);
+                        }
+                        break;
+                
+                }
             }
         }
         switch (currentDay)
@@ -790,6 +1309,49 @@ public class ExodusManager : MonoBehaviour
             case 1:
                 currentCharacter = allCharacters[4];
                 currentCharacter.SetActive(true);
+                break;
+            case 14:
+                Debug.Log(storyCharacterId);
+                storyCharacters[storyCharacterId] = allCharacters[16];
+                storyCharacterId++;
+                Debug.Log(storyCharacterId);
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
+
+                break;
+            case 4:
+
+                storyCharacters[storyCharacterId] = allCharacters[18];
+                storyCharacterId++;
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
+                break;
+            case 3:
+
+                
+                RelistUpgrades("Башня", "Tower", 10, allLocations[10], idOfUpgrade);
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
+                break;
+
+            case 8:
+                storyCharacters[storyCharacterId] = allCharacters[17];
+                storyCharacterId++;
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
+                break;
+            case 9:
+                storyCharacters[storyCharacterId] = allCharacters[20];
+                storyCharacterId++;
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
+                break;
+            case 11:
+                storyCharacters[storyCharacterId] = allCharacters[19];
+                storyCharacterId++;
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
+                break;
+            case 5:
+
+                //storyCharacters[storyCharacterId] = allCharacters[17];
+                //storyCharacterId++;
+                RelistUpgrades("Пещера", "Cave", 4, allLocations[11], idOfUpgrade);
+                StartCoroutine(JustFade(() => { SpawnCharacter(); }));
                 break;
         }
         
@@ -899,6 +1461,7 @@ public class ExodusManager : MonoBehaviour
     public void LoadAll(string path)
     {
         SaveData.current = (SaveData)Serialization.Load(path);
+        storyCharacterId = SaveData.current.stotyCharacterIdS;
         moneyAmmount = SaveData.current.money;
         sawDustAmmount = SaveData.current.sawDust;
         happinesAmmount = SaveData.current.happines;
@@ -910,14 +1473,31 @@ public class ExodusManager : MonoBehaviour
         idOfRest = SaveData.current.idOfRestS;
         savedRest = SaveData.current.savedRestS;
         currentDay = SaveData.current.currentDayS;
+        idOfUpgrade = SaveData.current.idOfUpgradeS;
 
+        peopleAgainst = SaveData.current.peopleAgainstS;
+        relationWithMex = SaveData.current.relationWithMexS;
+        moneyToMex = SaveData.current.moneyToMexS;
 
+        ChoiceManager.optionList = SaveData.current.optionListS;
+        ChoiceManager.optionNum = SaveData.current.optionNumS;
+        ChoiceManager.optionId = SaveData.current.optionIdS;
+        
+
+        idOfEventCounter = SaveData.current.idOfEventCounterS;
+        eventCounters = SaveData.current.eventCountersS;
+        whenToAppear = SaveData.current.whenToAppearS;
+        eventInts = SaveData.current.eventIntsS;
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            characters[i] = null;
+        }
 
         GameObject[] temporaryCharacter = new GameObject[100];
 
         var children = Resources.FindObjectsOfTypeAll<GameObject>();
-
-        Debug.Log(SaveData.current.upgradeId);
+        
 
         int m = 0;
         int n = 0;
@@ -926,33 +1506,55 @@ public class ExodusManager : MonoBehaviour
             foreach (var child in children)
             {
 
-                if (m < characterNames.Length)
-                {
-                    if (child.name == characterNames[m] && child.tag == "Character")
-                    {
-                        temporaryCharacter[m] = child.gameObject;
-                        m++;
-                    }
-                }
-                if(n < savedRest.Length)
-                {
-                    if (child.name == savedRest[n])
-                    {
-                        child.SetActive(true);
-                        n++;
-                    }
-                }
-                if (child.name == SaveData.current.savedCharactersS[l] && child.tag == "Character")
+            for (int i = 0; i < savedRest.Length; i++)
+            {
+                if (child.name == savedRest[i] && child.tag == "Item")
                 {
                     child.SetActive(true);
-                    l++;
-                }
-                if (child.name == SaveData.current.upgradeObject[o])
-                {
-                    RelistUpgrades(SaveData.current.upgradeName[o], SaveData.current.englishUpgradeName[o], SaveData.current.upgradePrice[o], child, idOfUpgrade);
-                    o++;
+                    
                 }
             }
+            Debug.Log("id:" + idOfUpgrade);
+            for (int i = 0; i < idOfUpgrade; i++)
+            {
+                Debug.Log(upgradedObjects[i]);
+
+                if (child.name == SaveData.current.upgradeObject[i] && child.tag == "Item")
+                {
+                    RelistUpgrades(SaveData.current.upgradeName[i], SaveData.current.englishUpgradeName[i], SaveData.current.upgradePrice[i], child, i);
+                    
+                }
+            }
+            
+            }
+        foreach (var child in children)
+        {
+            for (int i = 0; i < characterNames.Length && characterNames[i] != null; i++)
+            {
+                if (child.name == characterNames[i] && child.tag == "Character")
+                {
+                    characters[i] = child.gameObject;
+                }
+            }
+        }
+        int randAm = 0;
+        
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if(characters[i] != null)
+                randAm++;
+        }
+
+        GameObject[] randCharacters = new GameObject[randAm];
+
+        for (int i = 0; i < characters.Length; i++)
+        {
+            if (characters[i] != null)
+                randCharacters[i] = characters[i];
+        }
+
+        characters = randCharacters;
+
         for (int i = 0; i < SaveData.current.numberOfItems; i++)
         {
             itemList[i].name = SaveData.current.itemName[i];
@@ -965,24 +1567,14 @@ public class ExodusManager : MonoBehaviour
             adTheGet(itemList[i].name, itemList[i].englishName, itemList[i].description, itemList[i].englishDescription, nameOfSprite, itemList[i].cost, itemList[i].type);
         }
 
-        int count = 0;
-        for (int i = 0; i < temporaryCharacter.Length && temporaryCharacter[i] != null; i++)
-        {
-            count++;
-        }
-        characters = new GameObject[count];
-        while (count != 0)
-        {
-            count--;
-            characters[count] = temporaryCharacter[count];
-        }
+
 
         toSpawn = false;
         CheckEvents();
         ReloadUI();
-        loadText.SetActive(false);
         allCharacters[4].SetActive(false);
         dayCounter.text = currentDay.ToString();
+        buttonsPop.SetActive(false);
     }
 
     public GameObject prefab;
@@ -1020,7 +1612,7 @@ public class ExodusManager : MonoBehaviour
         {
             SaveData.current.savedCharactersS[i] = objCharacters[i].name;
         }
-        
+        SaveData.current.stotyCharacterIdS = storyCharacterId;
         SaveData.current.money = moneyAmmount;
         SaveData.current.sawDust = sawDustAmmount;
         SaveData.current.happines = happinesAmmount;
@@ -1032,10 +1624,23 @@ public class ExodusManager : MonoBehaviour
         SaveData.current.savedRestS = savedRest;
         SaveData.current.idOfRestS = idOfRest;
         SaveData.current.currentDayS = currentDay;
+        SaveData.current.idOfUpgradeS = idOfUpgrade;
+
+        SaveData.current.moneyToMexS = moneyToMex;
+        SaveData.current.relationWithMexS = relationWithMex;
+        SaveData.current.peopleAgainstS = peopleAgainst;
 
         SaveData.current.numberOfItems = idOfItem;
+        SaveData.current.optionListS = ChoiceManager.optionList;
+        SaveData.current.optionIdS = ChoiceManager.optionId;
+        SaveData.current.optionNumS = ChoiceManager.optionNum;
 
-        Debug.Log(idOfItem);
+
+        SaveData.current.idOfEventCounterS = idOfEventCounter;
+        SaveData.current.eventCountersS = eventCounters;
+        SaveData.current.whenToAppearS = whenToAppear;
+        SaveData.current.eventIntsS = eventInts;
+
         for (int i = 0; i < idOfItem; i++)
         {
             Debug.Log(info[i].name);
@@ -1056,7 +1661,7 @@ public class ExodusManager : MonoBehaviour
         {
 
             Debug.Log(info[i].name);
-            if (info[i].name != null)
+            if (info[i].upgradeObject != null)
             {
                 SaveData.current.upgradeName[i] = info[i].name;
                 SaveData.current.englishUpgradeName[i] = info[i].englishName;

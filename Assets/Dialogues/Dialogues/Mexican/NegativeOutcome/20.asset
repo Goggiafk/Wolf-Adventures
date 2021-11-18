@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 20
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 7701a5084a9ebd3479b548e4580e25f1, type: 2}
+  text: "\u041F\u043E\u0439\u0442\u0438 \u043B\u0438 \u0441 \u041C\u0435\u043A\u0441\u0438\u043A\u0430\u043D\u0446\u0435\u043C?"
+  textInEnglish: Will you go with Mexican?
+  options:
+  - text: "\u0425\u043E\u0440\u043E\u0448\u043E, \u0432\u044B\u0431\u043E\u0440\u0430
+      \u0443 \u043C\u0435\u043D\u044F \u043E\u0441\u043E\u0431\u043E \u0438 \u043D\u0435\u0442"
+    textInEnglish: Well, I don't really have a choice
+    dialogue: {fileID: 11400000, guid: 55d10c272efaf3d47b44c265ca560386, type: 2}

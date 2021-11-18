@@ -15,13 +15,13 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
   lines:
   - text: "\u041D\u0443, \u0442\u0430\u043A \u0447\u0442\u043E?"
-    englishText: 
+    englishText: So what?
   - text: "\u041F\u043E\u043C\u043E\u0436\u0435\u0442\u0435 \u0432 \u043F\u043E\u0438\u0441\u043A\u0430\u0445
       \u043C\u043E\u0435\u0439 \u043C\u0430\u043C\u044B?"
-    englishText: 
+    englishText: Will you help me find my mom?
   - text: "\u0423 \u043C\u0435\u043D\u044F \u043A\u0440\u043E\u043C\u0435 \u043D\u0435\u0451
       \u0431\u043E\u043B\u044C\u0448\u0435 \u043D\u0438\u043A\u043E\u0433\u043E \u043D\u0435\u0442"
-    englishText: 
+    englishText: I have nobody, but her
   choice: {fileID: 11400000, guid: ffea3539f0108e84180d348b3f84faed, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}

@@ -7,7 +7,11 @@ public class Controls : MonoBehaviour
     public Animator animator;
     public GameObject menu;
     public GameObject settings;
+    public GameObject map;
+    public GameObject book;
     public GameObject allUI;
+    public GameObject ui;
+    public GameObject buttons;
     public bool checkMenuClosed = false;
     void Update()
     {
@@ -26,11 +30,30 @@ public class Controls : MonoBehaviour
             }
             else
             {
-                allUI.SetActive(false);
-                menu.SetActive(true);
-                Time.timeScale = 0;
+                if (map.activeInHierarchy || book.activeInHierarchy)
+                {
+                    
+                    book.SetActive(false);
+                    map.SetActive(false);
+                    allUI.SetActive(true);
+                    ui.SetActive(true);
+                    buttons.SetActive(true);
+                }
+                else
+                {
+                    allUI.SetActive(false);
+                    menu.SetActive(true);
+                    Time.timeScale = 0;
+                }
             }
         }
+    }
+
+    public void openMenu()
+    {
+        allUI.SetActive(false);
+        menu.SetActive(true);
+        Time.timeScale = 0;
     }
 
     void Start()
@@ -46,10 +69,7 @@ public class Controls : MonoBehaviour
     }
     public void contin()
     {
-        if (PlayerPrefs.HasKey("shuffle"))
-        {
-            animator.SetInteger("shuffle", PlayerPrefs.GetInt("shuffle"));
-        }
+       
         Time.timeScale = 1;
         menu.SetActive(false);
     }

@@ -15,9 +15,10 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 49b3d19b82d46484bbe17b9915cf6d35, type: 2}
   lines:
   - text: "\u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u0438\u0445 \u0441\u043B\u043E\u0432..."
+    englishText: After these words...
   - text: "\u0412 \u043A\u043E\u0440\u043E\u043B\u0435\u0441\u0442\u0432\u0435 \u043D\u0430\u0447\u0430\u043B\u0441\u044F
       \u043A\u043E\u0448\u043C\u0430\u0440..."
+    englishText: A nightmare began in the kingdom...
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: f603430176c32404f83406f189dbd8c2, type: 2}
-  check: 0

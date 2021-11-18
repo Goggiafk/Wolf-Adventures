@@ -1,4 +1,4 @@
-﻿using Steamworks;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +22,7 @@ public class AchievementManager : MonoBehaviour
 
     public void RequestStats()
     {
-        isStatsRecieved = SteamUserStats.RequestCurrentStats();
+
 
         Debug.Log("is status recieved: " + isStatsRecieved);
 
@@ -30,7 +30,7 @@ public class AchievementManager : MonoBehaviour
 
     public void ClearAchievement(string achName)
     {
-        isAchievementCleared = Steamworks.SteamUserStats.ClearAchievement(achName);
+
 
         Debug.Log("is achievement cleared: " + isAchievementCleared);
         StoreStats();
@@ -38,7 +38,8 @@ public class AchievementManager : MonoBehaviour
 
     public void SetAchievement(string achName)
     {
-        isAchievementStatusUpdated = SteamUserStats.SetAchievement(achName);
+        RequestStats();
+
 
         Debug.Log("is achievement recieved: " + isAchievementStatusUpdated);
         StoreStats();
@@ -46,7 +47,7 @@ public class AchievementManager : MonoBehaviour
 
     public void StoreStats()
     {
-        isStatsStored = SteamUserStats.StoreStats();
+
 
         Debug.Log("is status stored: " + isStatsStored);
     }

@@ -7,18 +7,5 @@ using UnityEngine.UI;
 
 public class BarController : MonoBehaviour
 {
-    public Image bar;
-    public void Start()
-    {
-        bar.fillAmount = 0.5f;   
-    }
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
-    }
+    
 }

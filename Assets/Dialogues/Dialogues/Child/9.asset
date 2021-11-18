@@ -15,17 +15,17 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
   lines:
   - text: "\u041D\u0435\u0442!"
-    englishText: 
+    englishText: NO!
   - text: "\u0421\u0442\u043E\u0439\u0442\u0435!"
-    englishText: 
+    englishText: Wait!
   - text: "\u0415\u0441\u043B\u0438 \u0432\u044B \u043F\u043E\u043C\u043E\u0436\u0435\u0442\u0435
       \u043D\u0430\u0439\u0442\u0438 \u043C\u043E\u044E \u043C\u0430\u043C\u0443!"
-    englishText: 
+    englishText: If you will find my mother
   - text: "\u0422\u043E \u044F \u0432\u0430\u043C \u0434\u0430\u043C \u043D\u0430\u0448\u0443
       \u0441\u0435\u043C\u0435\u0439\u043D\u0443\u044E \u0440\u0435\u043B\u0438\u043A\u0432\u0438\u044E!"
-    englishText: 
+    englishText: I will give you our family relic
   - text: "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430..."
-    englishText: 
+    englishText: I beg you...
   choice: {fileID: 11400000, guid: ffea3539f0108e84180d348b3f84faed, type: 2}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 0}

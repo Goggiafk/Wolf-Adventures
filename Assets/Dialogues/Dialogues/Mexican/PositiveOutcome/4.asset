@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 1b0168afaf913af4cabdae1400f95d27, type: 2}
+  lines:
+  - text: "\u041E\u0440\u043A\u0438!"
+    englishText: Orches!
+  - text: "\u0415\u0441\u043B\u0438 \u0432\u044B \u043C\u0435\u043D\u044F \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0442\u0435"
+    englishText: If you will support me
+  - text: "\u042F \u0434\u0430\u043C \u0432\u0441\u0435\u043C \u0432\u044B\u0445\u043E\u0434\u043D\u044B\u0435!"
+    englishText: I'll give everyone the weekend off!
+  choice: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 137e44425549e1849bd017a47c1cb1b7, type: 2}
+  consequence: {fileID: 11400000, guid: d09e7a0c118c02a479fdbb7c42cef8b2, type: 2}

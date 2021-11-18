@@ -15,11 +15,11 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
   - text: "\u041D\u0435\u0442..."
-    englishText: 
+    englishText: No!
   - text: "\u0412\u044B \u043D\u0435 \u043C\u043E\u0436\u0435\u0442\u0435!"
-    englishText: 
+    englishText: You can't do this!
   - text: "\u0422\u041E\u041B\u042C\u041A\u041E \u041D\u0415 \u042D\u0428\u0410\u0424\u041E\u0422!"
-    englishText: 
+    englishText: NOT THE SCAFFOLD!
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: 74359b079b391b3438a32e56846dc09a, type: 2}

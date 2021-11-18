@@ -16,7 +16,7 @@ MonoBehaviour:
   lines:
   - text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0432\u0430\u043C, \u043C\u0443\u0434\u0440\u044B\u0439
       \u043A\u0430\u043F\u0438\u0442\u0430\u043D!"
+    englishText: Thank you, wise Captain!
   choice: {fileID: 0}
   nextDialogue: {fileID: 0}
   consequence: {fileID: 11400000, guid: 9a8cb6f172c546f41bc3ce4eb3e0a1f7, type: 2}
-  check: 0

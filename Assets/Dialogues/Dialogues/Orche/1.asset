@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 11400000, guid: 998ff7ae4870fc843a3829a768620d55, type: 2}
   lines:
-  - text: "\u0411\u0443\u043D\u0434 \u0431***\u044C \u0420\u0440\u0440\u0440\u0420\u0440\u0420\u0440\u0440!"
+  - text: "\u0411\u0443\u043D\u0434  \u0420\u0440\u0440\u0440\u0420\u0440\u0420\u0440\u0440!"
     englishText: Rebell RrrrrRRRrrrrR!
   choice: {fileID: 11400000, guid: 457c958e8d0b91747bee9dd563beb425, type: 2}
   nextDialogue: {fileID: 0}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 22
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 1b0168afaf913af4cabdae1400f95d27, type: 2}
+  lines:
+  - text: "\u041C\u043D\u0435 \u043E\u0447\u0435\u043D\u044C \u0436\u0430\u043B\u044C,
+      \u0447\u0442\u043E \u0432\u0441\u0451 \u0442\u0430\u043A \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C"
+    englishText: I am very sorry that everything turned out this way
+  - text: "\u0422\u044B \u0445\u043E\u0440\u043E\u0448\u0438\u0439 \u043A\u043E\u0440\u043E\u043B\u044C"
+    englishText: You're a good king
+  - text: "\u0418 \u0442\u043E\u0447\u043D\u043E \u043D\u0435 \u0437\u0430\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u0435\u0448\u044C
+      \u0441\u043C\u0435\u0440\u0442\u0438"
+    englishText: And you definitely don't deserve to die
+  - text: "\u041D\u043E \u044F \u0431\u043E\u044E\u0441\u044C, \u0447\u0442\u043E
+      \u0442\u0435\u0431\u044F \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A
+      \u043D\u0435 \u043E\u0442\u043F\u0443\u0441\u0442\u044F\u0442"
+    englishText: But I'm afraid that they won't let you go just like that
+  - text: "\u0412\u043E\u0442 \u043C\u043E\u0451 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435"
+    englishText: Here is my suggestion
+  - text: "\u0422\u044B \u0441\u0435\u0439\u0447\u0430\u0441 \u043F\u043E\u043A\u0438\u043D\u0435\u0448\u044C
+      \u0433\u043E\u0440\u043E\u0434"
+    englishText: You will leave town now
+  - text: "\u0410 \u043B\u044E\u0434\u044F\u043C \u044F \u0441\u043E\u043E\u0431\u0449\u0443,
+      \u0447\u0442\u043E \u0442\u044B \u043C\u0435\u0440\u0442\u0432"
+    englishText: And I will tell people that you are dead
+  - text: "\u0422\u043E\u0433\u0434\u0430 \u0442\u0435\u0431\u044F \u043D\u0435 \u0442\u0440\u043E\u043D\u0443\u0442"
+    englishText: Then they won't touch you
+  choice: {fileID: 11400000, guid: e48e8a229d0ee0248af73a78b84fd9b6, type: 2}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 0}

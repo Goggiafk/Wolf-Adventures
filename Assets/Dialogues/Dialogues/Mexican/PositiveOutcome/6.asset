@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 6
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 7701a5084a9ebd3479b548e4580e25f1, type: 2}
+  text: "\u0427\u0442\u043E \u043C\u043D\u0435 \u0441\u043A\u0430\u0437\u0430\u0437\u0430\u0442\u044C?"
+  textInEnglish: What to say?
+  options:
+  - text: "\"\u042F \u0441\u043D\u0438\u0436\u0443 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+      \u0440\u0430\u0431\u043E\u0447\u0438\u0445 \u0447\u0430\u0441\u043E\u0432!\""
+    textInEnglish: '"I will reduce the number of working hours!"'
+    dialogue: {fileID: 11400000, guid: 5f04f0605e1742641b04d990b3e285d8, type: 2}
+  - text: "\"\u0412\u044B \u0433\u0440\u044F\u0437\u043D\u044B\u0435 \u0436\u0438\u0432\u043E\u0442\u043D\u044B\u0435!\""
+    textInEnglish: '"You''re filthy animals!"'
+    dialogue: {fileID: 11400000, guid: c0785c288cce870469a269c893292545, type: 2}

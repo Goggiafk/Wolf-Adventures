@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Meksik
   m_EditorClassIdentifier: 
   characterName: "\u041C\u0435\u043A\u0441\u0438\u043A\u0430\u043D\u0435\u0446"
-  characterNameInEnglish: Mexican
-  characterVoice: {fileID: 8300000, guid: dd17dbf9edb2a9547a72f04520f805ca, type: 3}
+  characterNameInEnglish: The Mole
+  characterVoice: {fileID: 8300000, guid: b04bd1ff4ef02914ebe5b93a67c26cf4, type: 3}
   characterColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}

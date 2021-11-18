@@ -33,6 +33,6 @@ MonoBehaviour:
     englishText: 
   - text: "\u0413\u043E\u0442\u043E\u0432\u044C\u0441\u044F \u043A \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u0438\u044E"
     englishText: 
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: c7ef4ea58e7ec0e4781ce2a591f35b2a, type: 2}
   nextDialogue: {fileID: 0}
-  consequence: {fileID: 0}
+  consequence: {fileID: 11400000, guid: 58441e18ec774f44499e6630f8532368, type: 2}

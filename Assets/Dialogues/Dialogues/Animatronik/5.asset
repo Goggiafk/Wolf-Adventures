@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 244f72b4791d26c46b999c085989d807, type: 2}
+  text: ...
+  textInEnglish: ...
+  options:
+  - text: "\u0414\u0430 \u0443\u0437\u043D\u0430\u0442\u044C, \u043A\u0442\u043E
+      \u0442\u044B..."
+    textInEnglish: I wanted to know who you are
+    dialogue: {fileID: 11400000, guid: 29a5b934bfcba724ea1edc7ddcd73133, type: 2}
+  - text: "\u0423\u0436\u0435 \u043D\u0438\u0447\u0435\u0433\u043E..."
+    textInEnglish: Nothing for now...
+    dialogue: {fileID: 11400000, guid: cd9a93d6c4fc5c14a80095837aa647f9, type: 2}

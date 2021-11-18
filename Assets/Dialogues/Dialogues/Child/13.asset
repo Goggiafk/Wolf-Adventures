@@ -12,14 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
   m_Name: 13
   m_EditorClassIdentifier: 
-  text: "\u041C\u043D\u0435 \u0435\u0434\u044B \u0431\u044B"
   character: {fileID: 11400000, guid: e62111d5f97b0a943b1cb05fa3e05c02, type: 2}
+  text: "\u041C\u043D\u0435 \u0435\u0434\u044B \u0431\u044B"
+  textInEnglish: I am hungry
   options:
   - text: "\u0411\u0435\u0437 \u043F\u0440\u043E\u0431\u043B\u0435\u043C(-3 \u043F\u0430\u0439\u043A\u0430)"
+    textInEnglish: No problem(-3 food rations)
     dialogue: {fileID: 11400000, guid: 8c374951c9cfbb94eb10d8d67122c5fb, type: 2}
   - text: "\u041C\u044B \u043F\u043E\u0441\u0442\u0440\u043E\u0438\u043C \u043F\u0440\u0438\u044E\u0442,
       \u0433\u0434\u0435 \u043E \u0442\u0435\u0431\u0435 \u043F\u043E\u0437\u0430\u0431\u043E\u0442\u044F\u0442\u0441\u044F"
+    textInEnglish: We will build a shelter for all kids
     dialogue: {fileID: 11400000, guid: 52f09d2ac2dabe44d864a09399dd0e95, type: 2}
   - text: "\u0421\u0430\u043C \u0437\u0430\u0440\u0430\u0431\u043E\u0442\u0430\u0439
       \u043D\u0430 \u044D\u0442\u043E"
+    textInEnglish: Earn it yourself in mines
     dialogue: {fileID: 11400000, guid: 80a1115a7bda55f419b3098966417c53, type: 2}

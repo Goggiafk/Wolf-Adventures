@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137488531aa64a34c8a553030b7444cc, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: ea470a370f44ecd41aa67aec4d53f268, type: 2}
+  text: ...
+  textInEnglish: ...
+  options:
+  - text: "\u0418 \u0447\u0435\u043C \u0436\u0435 \u044F \u043C\u043E\u0433\u0443
+      \u0442\u0435\u0431\u0435 \u043F\u043E\u043C\u043E\u0447\u044C?"
+    textInEnglish: How may I help you?
+    dialogue: {fileID: 11400000, guid: 5163a6a0771bf04449404228d028a029, type: 2}
+  - text: "\u041D\u0435 \u0442\u043E\u043C\u0438, \u0431\u043B\u0438\u0436\u0435
+      \u043A \u0441\u0443\u0442\u0438"
+    textInEnglish: Closer to the point
+    dialogue: {fileID: 11400000, guid: ad34eb5a068fa4441877c53bb6532377, type: 2}
+  - text: "\u041C\u043D\u0435 \u044D\u0442\u043E \u043D\u0435\u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E"
+    textInEnglish: I am not interested
+    dialogue: {fileID: 11400000, guid: 9eaa018a34132564d8d164d8058704cb, type: 2}

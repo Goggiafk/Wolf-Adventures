@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636fad7bc0c2aa47a593a33d99d70c6, type: 3}
+  m_Name: 25
+  m_EditorClassIdentifier: 
+  character: {fileID: 11400000, guid: 1b0168afaf913af4cabdae1400f95d27, type: 2}
+  lines:
+  - text: "\u0422\u044B \u0441 \u0443\u043C\u0430 \u0441\u043E\u0448\u0451\u043B?"
+    englishText: Are you crazy?
+  - text: "\u041E\u043D\u0438 \u0442\u0435\u0431\u044F \u0440\u0430\u0437\u043E\u0440\u0432\u0443\u0442
+      \u043D\u0430 \u0447\u0430\u0441\u0442\u0438"
+    englishText: They'll tear you apart
+  - text: "\u041D\u0435 \u0443\u0441\u043F\u0435\u0435\u0448\u044C \u0438 \u0441\u043B\u043E\u0432\u0430
+      \u0441\u043A\u0430\u0437\u0430\u0442\u044C!"
+    englishText: You won't have time to say a word!
+  - text: "\u042F \u0442\u0435\u0431\u0435 \u043D\u0430\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u043D\u043E
+      \u0441\u043E\u0432\u0435\u0442\u0443\u044E \u0431\u0435\u0436\u0430\u0442\u044C!"
+    englishText: I strongly advise you to flee!
+  choice: {fileID: 11400000, guid: 7735c066ad002a54f90ed7aa8947d73c, type: 2}
+  nextDialogue: {fileID: 0}
+  consequence: {fileID: 0}
