@@ -3,11 +3,9 @@
 [![Price](https://img.shields.io/badge/Price–$9.99-blue)](https://store.steampowered.com/app/1545570/Wolf_Adventures/)
 
 
-My first self-made game that was released on Steam
+My first self-made game that was released on Steam under my personal developer account.
 
-
-Made in: Unity Engine
-
+Made in: Unity Engine/C#
 
 <p align="center">
   <img width="616" height="353" alt="image" src="https://github.com/user-attachments/assets/43dd0d8e-8a1d-45dd-ab82-40ca2ecc290c" alt="Wolf Adventures – Hero screenshot" />
